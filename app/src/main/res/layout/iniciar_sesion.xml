@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".IniciarSesion"
     android:background="@drawable/fondo_de_app">
 
     <TextView
@@ -45,7 +45,7 @@
         android:id="@+id/BtnConfirmarInicio"
         android:layout_width="142dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/PasswordName"
+        android:layout_below="@id/Password"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="65dp"
         android:background="@drawable/boton_redondo"
@@ -55,7 +55,7 @@
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/PasswordName"
+        android:id="@+id/Password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/UserName"
