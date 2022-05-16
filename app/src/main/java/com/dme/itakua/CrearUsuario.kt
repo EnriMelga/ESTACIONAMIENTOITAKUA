@@ -6,17 +6,11 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
-import androidx.core.view.get
-import com.android.volley.AuthFailureError
-import com.android.volley.Request
-import com.android.volley.Response
-import com.android.volley.VolleyError
-import com.android.volley.toolbox.JsonRequest
+import com.android.volley.*
 import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
 import com.dme.itakua.databinding.ActivityCrearUsuarioBinding
-import org.json.JSONException
 import org.json.JSONObject
-import kotlin.Throws
 
 
 
@@ -40,7 +34,6 @@ class CrearUsuario : AppCompatActivity() {
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
                 Toast.makeText(this@CrearUsuario,"Has seleccionado " +tipoUsuario[p2],Toast.LENGTH_LONG).show()
             }
-
             override fun onNothingSelected(p0: AdapterView<*>?) {
                 TODO("Not yet implemented")
             }
@@ -57,44 +50,47 @@ class CrearUsuario : AppCompatActivity() {
         val Nombre_Usuario_Completo: String = binding.CrearUsuario.text.toString()
         val Contraseña: String = binding.CrearContraseA.text.toString()
         val ConfirmarContraseña:String = binding.ConfirmarContraseA.text.toString()
-        var tipoUsuario:String = binding.TipoUsuarioSpinner.selectedItem.toString()
+        var tipoUsuario: Int
 
+        //Chequeo de si selecciono Funcionario o Administrador
+        tipoUsuario = if(binding.TipoUsuarioSpinner.selectedItem=="Administrador") {
+            1
+        }else{
+            2
+        }
 
-        //Creando volley String Request
-        val url = "http://localhost/itakua/api_registrarse.php"
+        //URL de la API en el Servidor
+        val url = "http://192.168.56.1/itakua/api_registrarse.php"
 
-        val stringRequest = object : StringRequest(Request.Method.POST,url,
-        Response.Listener<String> { response ->
-            try {
-                val obj = JSONObject(response)
-                Toast.makeText(applicationContext,obj.getString("message"),Toast.LENGTH_LONG).show()
-            }catch (e:JSONException){
-                e.printStackTrace()
+        var requestQueue: RequestQueue = Volley.newRequestQueue(this)
+        var stringRequest:StringRequest = object :StringRequest(Request.Method.POST,url,Response.Listener { response ->
+            val obj = JSONObject(response)
+
+            //Mostrar mensaje de respuesta de la API
+            Toast.makeText(applicationContext,obj.getString("message"),Toast.LENGTH_LONG).show()
+            if(obj.getString("error").equals("false")){
+                limpiar()
             }
-
-        },
-        Response.ErrorListener { volleyError -> Toast.makeText(applicationContext, volleyError.message,Toast.LENGTH_LONG).show() }){
-            @Throws(AuthFailureError::class)
-
-            //Envio de validaciones en la BD
-            override fun getParams(): Map<String,String> {
-                val params = HashMap<String,String>()
-                params.put("username",Nombre_de_Usuario)
-                params.put("nombrecompleto",Nombre_Usuario_Completo)
-                params.put("pass",Contraseña)
-                params.put("confirmpass",ConfirmarContraseña)
-                if(tipoUsuario=="Administrador"){
-                    val UsuarioAdministrador:Int=1
-                    params.put("tipoUsuario", UsuarioAdministrador.toString())
-                }else{
-                    val UsuarioFuncionario:Int=2
-                    params.put("tipoUsuario",UsuarioFuncionario.toString())
-                }
-                return params
+        }, Response.ErrorListener { error ->
+            Toast.makeText(this,error.message,Toast.LENGTH_LONG).show()
+        }){
+            override fun getParams(): MutableMap<String, String>? {//Envio de validaciones en la BD
+                val parms=HashMap<String,String>()
+                parms.put("username",Nombre_de_Usuario)
+                parms.put("nombrecompleto",Nombre_Usuario_Completo)
+                parms.put("pass",Contraseña)
+                parms.put("confirmpass",ConfirmarContraseña)
+                parms.put("tipoUsuario",tipoUsuario.toString())
+                return parms
             }
         }
-       //Ading request to queve
-      VolleySingleton.instance?.addToRequestQueve(stringRequest)
+        requestQueue.add(stringRequest)
     }
-
+    //Vacia los las escrituras caso se confirme registro del Usuario
+    private fun limpiar(){
+        binding.CrearNuevoUsuario.setText("")
+        binding.CrearUsuario.setText("")
+        binding.ConfirmarContraseA.setText("")
+        binding.CrearContraseA.setText("")
+    }
 }

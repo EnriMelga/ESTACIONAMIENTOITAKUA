@@ -4,15 +4,13 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.android.volley.AuthFailureError
-import com.android.volley.Request
-import com.android.volley.Response
-import com.android.volley.VolleyError
-import com.android.volley.toolbox.JsonObjectRequest
+import com.android.volley.*
 import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
 import com.dme.itakua.databinding.IniciarSesionBinding
 import org.json.JSONException
 import org.json.JSONObject
+import com.android.volley.toolbox.JsonObjectRequest as JsonObjectRequest1
 
 class IniciarSesion : AppCompatActivity() {
     private lateinit var binding: IniciarSesionBinding
@@ -21,46 +19,42 @@ class IniciarSesion : AppCompatActivity() {
         binding = IniciarSesionBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.BtnConfirmarInicio.setOnClickListener{
-          ejecutarServicio()
+          validarInicioSesion() //Llamada a validacion
         }
     }
 
-    //Conexiones con la BD y validacion de Inicio de Sesion
-    private fun ejecutarServicio(){
-        //Toast.makeText(applicationContext,"Boton Presionado",Toast.LENGTH_LONG).show()
+    //Funcion de Conexiones con la API y validacion de Inicio de Sesion
+    private fun validarInicioSesion(){
 
         val NombreUsuario : String = binding.UserName.text.toString()
         val ContraseñaUsuario: String = binding.Password.text.toString()
 
-        val url = "http://localhost/itakua/api_login.php"
+        //URL de la API en el Servidor
+        var url = "http://192.168.56.1/itakua/api_login.php"
 
-        val stringRequest = object : StringRequest(Request.Method.POST,url,
-        Response.Listener<String> { response ->
+        var requestQueue:RequestQueue=Volley.newRequestQueue(this)
+        var stringRequest:StringRequest = object :StringRequest(Request.Method.POST,url,Response.Listener { response ->
+            val obj = JSONObject(response)
 
-        //val request = JsonObjectRequest(Request.Method.POST,url,jsonObject,)
-            try {
-                val obj = JSONObject(response)
-                Toast.makeText(applicationContext,obj.getString("message"),Toast.LENGTH_LONG).show()
-                Toast.makeText(applicationContext,"Conectado",Toast.LENGTH_LONG).show()
-
-            }catch (e:JSONException){
-                e.printStackTrace()
-                Toast.makeText(applicationContext,"Error conect",Toast.LENGTH_LONG).show()
-
+            //Mostrar mensaje de respuesta de la API
+            Toast.makeText(applicationContext,obj.getString("message"),Toast.LENGTH_LONG).show()
+            if(obj.getString("error").equals("false")){ //Inicio de Sesion validado
+                startActivity(Intent(this,PantallaInicio::class.java))
             }
-        },
-        Response.ErrorListener { volleyError -> Toast.makeText(applicationContext, volleyError.message,Toast.LENGTH_LONG).show() }) {
-            @Throws(AuthFailureError::class)
-        )
 
-            //Envio de Usuario y contraseña a la BD
-            override fun getParams(): Map<String, String> {
-                val params = HashMap<String,String>()
-                params.put("username",NombreUsuario)
-                params.put("pass",ContraseñaUsuario)
-                return params
+        }, Response.ErrorListener { error ->
+            Toast.makeText(this,error.message,Toast.LENGTH_LONG).show()
+        }){
+            override fun getParams(): MutableMap<String, String>? {
+                val parms=HashMap<String,String>()
+                parms.put("username",NombreUsuario)
+                parms.put("pass",ContraseñaUsuario)
+                return parms
             }
         }
-        VolleySingleton.instance?.addToRequestQueve(stringRequest)
+        requestQueue.add(stringRequest)
+        }
     }
-}
+
+
+
