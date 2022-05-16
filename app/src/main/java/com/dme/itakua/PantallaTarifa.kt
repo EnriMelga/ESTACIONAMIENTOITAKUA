@@ -36,6 +36,7 @@ class PantallaTarifa : AppCompatActivity() {
                         "Seleccionaste " + rodados[p2],
                         Toast.LENGTH_LONG
                     ).show()
+                    mostrarDatos(validarSeleccion(rodados[p2]))
                 }
 
                 override fun onNothingSelected(p0: AdapterView<*>?) {
@@ -51,24 +52,36 @@ class PantallaTarifa : AppCompatActivity() {
 
         //URL  de la API en el servidor
         var tipoVehiculoSeleccionado:String
-        tipoVehiculoSeleccionado = if(binding.tipoDeVehiculo.selectedItem=="Auto"){
+
+        tipoVehiculoSeleccionado = binding.tipoDeVehiculo.selectedItem as String
+
+        var url = validarSeleccion(tipoVehiculoSeleccionado)
+        mostrarDatos(url)
+
+    }
+
+    private fun validarSeleccion(tipoVehiculo:String):String{
+        var urldir:String
+        urldir = if(tipoVehiculo=="Auto"){
             "http://192.168.56.1/itakua/api_tarifas.php?tipovehiculo=1"
         }else{
             "http://192.168.56.1/itakua/api_tarifas.php?tipovehiculo=2"
         }
-        var url = tipoVehiculoSeleccionado
+        return urldir
+    }
+    private fun mostrarDatos(url:String){
 
         var requestQueue: RequestQueue = Volley.newRequestQueue(this)
         var stringRequest: StringRequest =
-             StringRequest(Request.Method.GET, url, { response ->
+            StringRequest(Request.Method.GET, url, { response ->
                 val jsonArray = JSONArray(response)
                 for(i in 0 until jsonArray.length()){
                     val jsonObject = JSONObject(jsonArray.getString(i))
                     when(i){
-                    0 -> binding.horaTarifa.setText(jsonObject.get("precio").toString())
-                    1 -> binding.diaTarifa.setText(jsonObject.get("precio").toString())
-                    2 -> binding.semanaTarifa.setText(jsonObject.get("precio").toString())
-                    3 -> binding.mesTarifa.setText(jsonObject.get("precio").toString())
+                        0 -> binding.horaTarifa.setText(jsonObject.get("precio").toString())
+                        1 -> binding.diaTarifa.setText(jsonObject.get("precio").toString())
+                        2 -> binding.semanaTarifa.setText(jsonObject.get("precio").toString())
+                        3 -> binding.mesTarifa.setText(jsonObject.get("precio").toString())
                     }
                 }
             }, { error ->
