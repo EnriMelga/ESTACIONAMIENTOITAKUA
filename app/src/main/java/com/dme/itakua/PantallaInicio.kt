@@ -13,8 +13,11 @@ class PantallaInicio : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityPantallaInicioBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.BtnAbrirRegistrarUsuario.setOnClickListener {
+        binding.BtnVentanaTarifas.setOnClickListener {
             startActivity(Intent(this,PantallaTarifa::class.java))
+        }
+        binding.BtnAbrirRegistrarUsuario.setOnClickListener {
+            startActivity(Intent(this,CrearUsuario::class.java))
         }
 
     }
