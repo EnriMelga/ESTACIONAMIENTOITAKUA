@@ -8,12 +8,12 @@
     android:background="@drawable/fondo_de_app">
 
     <Button
-        android:id="@+id/BtnAbrirRegistrarUsuario"
+        android:id="@+id/BtnVentanaTarifas"
         android:layout_width="170dp"
         android:layout_height="80dp"
         android:layout_marginTop="188dp"
         android:background="@drawable/boton_redondo"
-        android:hint="Registrar Nuevo Usuario"
+        android:hint="Ver Tarifas Vigentes"
         android:textColor="@color/black"
         android:textSize="20dp"
         android:textStyle="bold"
@@ -21,6 +21,18 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/MenuPrincipalText" />
+
+    <Button
+        android:id="@+id/BtnAbrirRegistrarUsuario"
+        android:layout_width="170dp"
+        android:layout_height="80dp"
+        android:background="@drawable/boton_redondo"
+        android:hint="Registrar nuevo Usuario"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="120dp"
+        tools:layout_editor_absoluteY="453dp" />
 
     <TextView
         android:id="@+id/MenuPrincipalText"
