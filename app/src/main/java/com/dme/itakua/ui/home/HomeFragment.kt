@@ -19,26 +19,42 @@ class HomeFragment: Fragment() {
     // This property is only valid between onCreateView and
     //onDestroyView.
     private val binding get() = _binding!!
-    val tipoVehiculo: Array<String> = arrayOf("Auto", "Moto")
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
         val homeViewModel =
             ViewModelProvider(this).get(HomeViewModel::class.java)
-        val arrayAdapter = ArrayAdapter(this@HomeFragment, R.layout.spinner_dimensiones, tipoVehiculo)
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
         val textView: TextView = binding.textHome
         homeViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
+        binding.spinnerTiposervicio.onItemSelectedListener =  object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+                Toast.makeText(
+                    getActivity(),
+                    "Seleccionaste " + binding.spinnerTiposervicio.selectedItem.toString(),
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+
+            override fun onNothingSelected(p0: AdapterView<*>?) {
+                TODO("Not yet implemented")
+            }
+        }
+
         return root
     }
+
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
+
+
 }
