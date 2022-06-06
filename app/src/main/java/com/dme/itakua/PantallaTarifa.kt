@@ -2,17 +2,16 @@ package com.dme.itakua
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.Editable
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import com.android.volley.Request
 import com.android.volley.RequestQueue
-import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.dme.itakua.databinding.ActivityPantallaTarifaBinding
+import com.dme.itakua.ui.home.HomeViewModel
 import org.json.JSONArray
 import org.json.JSONObject
 
@@ -36,6 +35,7 @@ class PantallaTarifa : AppCompatActivity() {
                         "Seleccionaste " + rodados[p2],
                         Toast.LENGTH_LONG
                     ).show()
+                    //Actualizar datos segun el tipo de vahiculo seleccionado
                     mostrarDatos(validarSeleccion(rodados[p2]))
                 }
 
@@ -49,7 +49,6 @@ class PantallaTarifa : AppCompatActivity() {
 
     private fun modificarMonto() {
 
-
         //URL  de la API en el servidor
         var tipoVehiculoSeleccionado:String
 
@@ -60,15 +59,18 @@ class PantallaTarifa : AppCompatActivity() {
 
     }
 
+    //Recibir los precios segun seleccione el Usuario
     private fun validarSeleccion(tipoVehiculo:String):String{
         var urldir:String
         urldir = if(tipoVehiculo=="Auto"){
-            "http://192.168.56.1/itakua/api_tarifas.php?tipovehiculo=1"
+            "http://192.168.56.1/estacionamiento-ita-kua/api/api_tarifas.php?tipovehiculo=1"
         }else{
-            "http://192.168.56.1/itakua/api_tarifas.php?tipovehiculo=2"
+            "http://192.168.56.1/estacionamiento-ita-kua/api/api_tarifas.php?tipovehiculo=2"
         }
         return urldir
     }
+
+    //Conexion con el servidor y lectura de Json y distribucion en los campos correspondientes
     private fun mostrarDatos(url:String){
 
         var requestQueue: RequestQueue = Volley.newRequestQueue(this)

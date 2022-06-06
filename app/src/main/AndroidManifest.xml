@@ -14,7 +14,9 @@
         android:usesCleartextTraffic="true">
         <activity
             android:name=".PantallaInicio"
-            android:exported="false" />
+            android:exported="false"
+            android:label="@string/title_activity_pantalla_inicio"
+            android:theme="@style/Theme.EstacionamientoItaKua.NoActionBar" />
         <activity
             android:name=".CrearUsuario"
             android:exported="false" />

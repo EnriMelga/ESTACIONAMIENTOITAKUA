@@ -30,7 +30,7 @@ class IniciarSesion : AppCompatActivity() {
         val ContraseñaUsuario: String = binding.Password.text.toString()
 
         //URL de la API en el Servidor
-        var url = "http://192.168.56.1/itakua/api_login.php"
+        var url = "http://192.168.56.1/estacionamiento-ita-kua/api/api_login.php"
 
         var requestQueue:RequestQueue=Volley.newRequestQueue(this)
         var stringRequest:StringRequest = object :StringRequest(Request.Method.POST,url,Response.Listener { response ->
@@ -45,6 +45,7 @@ class IniciarSesion : AppCompatActivity() {
         }, Response.ErrorListener { error ->
             Toast.makeText(this,error.message,Toast.LENGTH_LONG).show()
         }){
+            //Envio de los datos al Servidor
             override fun getParams(): MutableMap<String, String>? {
                 val parms=HashMap<String,String>()
                 parms.put("username",NombreUsuario)

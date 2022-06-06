@@ -60,7 +60,7 @@ class CrearUsuario : AppCompatActivity() {
         }
 
         //URL de la API en el Servidor
-        val url = "http://192.168.56.1/itakua/api_registrarse.php"
+        val url = "http://192.168.56.1/estacionamiento-ita-kua/api/api_registrarse.php"
 
         var requestQueue: RequestQueue = Volley.newRequestQueue(this)
         var stringRequest:StringRequest = object :StringRequest(Request.Method.POST,url,Response.Listener { response ->
