@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".IniciarSesion"
-    android:background="@drawable/fondo_de_app">
+    android:background="@drawable/fondo_probar">
 
     <TextView
         android:id="@+id/Name"
@@ -30,7 +30,8 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
-        android:background="#30ffffff"
+        android:background="@drawable/lineadobarra"
+        android:backgroundTint="@color/white"
         android:drawableLeft="@drawable/ic_baseline_person_24"
         android:drawablePadding="20dp"
         android:hint="Nombre"
@@ -63,7 +64,8 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
-        android:background="#30ffffff"
+        android:background="@drawable/lineadobarra"
+        android:backgroundTint="@color/white"
         android:drawableLeft="@drawable/ic_baseline_lock_24"
         android:drawablePadding="20dp"
         android:hint="Contraseña"

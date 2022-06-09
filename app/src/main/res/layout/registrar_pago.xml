@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:id="@+id/RegistrarPagoText"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="56dp"
+        android:text="Registro de Pagos"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/CI_EditText"
+        android:layout_width="191dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="88dp"
+        android:background="@drawable/lineadobarra"
+        android:inputType="number"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.931"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/RegistrarPagoText" />
+
+    <TextView
+        android:id="@+id/CI_text"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="154dp"
+        android:text="CI:"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+
+        app:layout_constraintEnd_toStartOf="@+id/CI_EditText"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/RegistrarPagoText" />
+
+    <EditText
+        android:id="@+id/Nombre_Edit_text"
+        android:layout_width="191dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/lineadobarra"
+        android:inputType="number"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.927"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/CI_EditText" />
+
+    <TextView
+        android:id="@+id/NombreText"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="94dp"
+        android:text="Nombre:"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toStartOf="@+id/Nombre_Edit_text"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/CI_text" />
+
+    <EditText
+        android:id="@+id/ApellidoEditText"
+        android:layout_width="191dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="197dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/lineadobarra"
+        android:inputType="number"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="@+id/ApellidoText"
+        app:layout_constraintTop_toTopOf="@+id/Nombre_Edit_text" />
+
+    <TextView
+        android:id="@+id/ApellidoText"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="70dp"
+        android:text="Apellido:"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/NombreText" />
+
+    <EditText
+        android:id="@+id/FechaEditText"
+        android:layout_width="191dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="196dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/lineadobarra"
+        android:inputType="number"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="@+id/FechaText"
+        app:layout_constraintTop_toTopOf="@+id/ApellidoEditText" />
+
+    <TextView
+        android:id="@+id/FechaText"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="70dp"
+        android:text="Fecha:"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ApellidoText" />
+
+    <TextView
+        android:id="@+id/VencimientoText"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="70dp"
+        android:text="Vencimiento:"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/FechaText" />
+
+    <EditText
+        android:id="@+id/VencimientoEditText"
+        android:layout_width="191dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="197dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/lineadobarra"
+        android:inputType="number"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="@+id/VencimientoText"
+        app:layout_constraintTop_toTopOf="@+id/FechaEditText" />
+
+    <TextView
+        android:id="@+id/MontoText"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="70dp"
+        android:text="Monto:"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/VencimientoText" />
+
+    <EditText
+        android:id="@+id/MontoEditText"
+        android:layout_width="191dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="197dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/lineadobarra"
+        android:inputType="number"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="@+id/MontoText"
+        app:layout_constraintTop_toTopOf="@+id/VencimientoEditText" />
+
+    <Button
+        android:id="@+id/ImprimirRegistro"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="104dp"
+        android:background="@drawable/boton_impresora"
+        android:text="Imprimir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.581"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/MontoEditText" />
+
+    <ImageView
+        android:id="@+id/ImagenImpresora"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="168dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.694"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/MontoText"
+        app:srcCompat="@drawable/ic_baseline_print_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
