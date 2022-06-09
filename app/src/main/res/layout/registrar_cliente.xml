@@ -3,15 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/RegistrarPagoText"
-        android:layout_width="250dp"
+        android:id="@+id/RegistrarClienteText"
+        android:layout_width="260dp"
         android:layout_height="50dp"
-        android:layout_marginTop="56dp"
-        android:text="Registro de Pagos"
+        android:layout_marginTop="68dp"
+        android:text="Registro de Cliente"
         android:textColor="@color/black"
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,7 +30,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.931"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/RegistrarPagoText" />
+        app:layout_constraintTop_toTopOf="@+id/RegistrarClienteText" />
 
     <TextView
         android:id="@+id/CI_text"
@@ -46,7 +45,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.046"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/RegistrarPagoText" />
+        app:layout_constraintTop_toTopOf="@+id/RegistrarClienteText" />
 
     <EditText
         android:id="@+id/Nombre_Edit_text"
@@ -54,7 +53,6 @@
         android:layout_height="40dp"
         android:layout_marginTop="70dp"
         android:background="@drawable/lineadobarra"
-        android:inputType="number"
         android:textColor="@color/black"
         android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -82,7 +80,6 @@
         android:layout_marginStart="172dp"
         android:layout_marginTop="70dp"
         android:background="@drawable/lineadobarra"
-        android:inputType="number"
         android:textColor="@color/black"
         android:textSize="25dp"
         app:layout_constraintStart_toStartOf="@+id/ApellidoText"
@@ -101,7 +98,7 @@
         app:layout_constraintTop_toTopOf="@+id/NombreText" />
 
     <EditText
-        android:id="@+id/FechaEditText"
+        android:id="@+id/TelefonoEditText"
         android:layout_width="220dp"
         android:layout_height="40dp"
         android:layout_marginStart="172dp"
@@ -110,93 +107,80 @@
         android:inputType="number"
         android:textColor="@color/black"
         android:textSize="25dp"
-        app:layout_constraintStart_toStartOf="@+id/FechaText"
+        app:layout_constraintStart_toStartOf="@+id/TelefonoText"
         app:layout_constraintTop_toTopOf="@+id/ApellidoEditText" />
 
     <TextView
-        android:id="@+id/FechaText"
+        android:id="@+id/TelefonoText"
         android:layout_width="100dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="70dp"
-        android:text="Fecha:"
+        android:text="Telefono:"
         android:textColor="@color/black"
         android:textSize="25dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/ApellidoText" />
 
     <TextView
-        android:id="@+id/VencimientoText"
-        android:layout_width="160dp"
+        android:id="@+id/Nro_chapa_Text"
+        android:layout_width="165dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="70dp"
-        android:text="Vencimiento:"
+        android:text="Nro. de Chapa:"
         android:textColor="@color/black"
         android:textSize="25dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/FechaText" />
+        app:layout_constraintTop_toTopOf="@+id/TelefonoText" />
 
     <EditText
-        android:id="@+id/VencimientoEditText"
+        android:id="@+id/Nro_chapa_EditText"
         android:layout_width="220dp"
         android:layout_height="40dp"
         android:layout_marginStart="172dp"
         android:layout_marginTop="70dp"
         android:background="@drawable/lineadobarra"
-        android:inputType="number"
         android:textColor="@color/black"
         android:textSize="25dp"
-        app:layout_constraintStart_toStartOf="@+id/VencimientoText"
-        app:layout_constraintTop_toTopOf="@+id/FechaEditText" />
+        app:layout_constraintStart_toStartOf="@+id/Nro_chapa_Text"
+        app:layout_constraintTop_toTopOf="@+id/TelefonoEditText" />
 
     <TextView
-        android:id="@+id/MontoText"
-        android:layout_width="100dp"
+        android:id="@+id/DireccionText"
+        android:layout_width="165dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="70dp"
-        android:text="Monto:"
+        android:text="D. de Trabajo:"
         android:textColor="@color/black"
         android:textSize="25dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/VencimientoText" />
+        app:layout_constraintTop_toTopOf="@+id/Nro_chapa_Text" />
 
     <EditText
-        android:id="@+id/MontoEditText"
+        android:id="@+id/DireccionEditText"
         android:layout_width="220dp"
         android:layout_height="40dp"
         android:layout_marginStart="172dp"
         android:layout_marginTop="70dp"
         android:background="@drawable/lineadobarra"
-        android:inputType="number"
         android:textColor="@color/black"
         android:textSize="25dp"
-        app:layout_constraintStart_toStartOf="@+id/MontoText"
-        app:layout_constraintTop_toTopOf="@+id/VencimientoEditText" />
+        app:layout_constraintStart_toStartOf="@+id/DireccionText"
+        app:layout_constraintTop_toTopOf="@+id/Nro_chapa_EditText" />
 
     <Button
         android:id="@+id/ImprimirRegistro"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="104dp"
-        android:background="@drawable/boton_impresora"
-        android:text="Imprimir"
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="108dp"
+        android:background="@drawable/boton_redondo_color2"
+        android:text="Guardar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.581"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/MontoEditText" />
+        app:layout_constraintTop_toTopOf="@+id/DireccionEditText" />
 
-    <ImageView
-        android:id="@+id/ImagenImpresora"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="104dp"
-        android:layout_marginEnd="168dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.694"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/MontoText"
-        app:srcCompat="@drawable/ic_baseline_print_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
