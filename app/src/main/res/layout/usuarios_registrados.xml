@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/RegistrarPagoText"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:text="Usuarios "
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="110dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="151dp"
+        android:text="Contraseña"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintStart_toStartOf="@+id/textView10"
+        app:layout_constraintTop_toTopOf="@+id/textView10" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="84dp"
+        android:text="Usuarios"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.217"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/RegistrarPagoText" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="46dp"
+        android:background="@drawable/boton_redondo_sin_color"
+        android:backgroundTint="@color/personalizado"
+        android:text="Crear Nuevo Usuario"
+        android:drawableLeft="@drawable/ic_baseline_edit_24"
+        android:paddingStart="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="384dp"
+        android:layout_height="380dp"
+        android:background="@drawable/boton_redondo_sin_color"
+        android:backgroundTint="@color/personalizado"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

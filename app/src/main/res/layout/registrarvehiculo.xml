@@ -103,27 +103,20 @@
 
     <Button
         android:id="@+id/ImprimirRegistro"
-        android:layout_width="100dp"
+        android:layout_width="150dp"
         android:layout_height="40dp"
         android:layout_marginTop="244dp"
         android:background="@drawable/boton_impresora"
         android:text="Imprimir"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.524"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/horaTarifa" />
-
-    <ImageView
-        android:id="@+id/ImagenImpresora"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="244dp"
-        android:layout_marginEnd="168dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.596"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/horaTarifa"
-        app:srcCompat="@drawable/ic_baseline_print_24" />
+        android:drawableLeft="@drawable/ic_baseline_print_35"
+        android:paddingStart="12dp"/>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

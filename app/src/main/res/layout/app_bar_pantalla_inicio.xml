@@ -23,14 +23,7 @@
 
     <include layout="@layout/content_pantalla_inicio" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="bottom|right"
-        android:layout_marginEnd="@dimen/fab_margin"
-        android:layout_marginBottom="16dp"
-        app:srcCompat="@drawable/ic_baseline_print_35"/>
+
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

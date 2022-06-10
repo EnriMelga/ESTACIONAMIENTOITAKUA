@@ -22,5 +22,9 @@
             android:id="@+id/pantallaTarifa2"
             android:icon="@drawable/barrita2"
             android:title="Pantalla Tarifa"/>
+        <item
+            android:id="@+id/configuracionFragment"
+            android:icon="@drawable/barrita2"
+            android:title="Configuracion" />
     </group>
 </menu>
