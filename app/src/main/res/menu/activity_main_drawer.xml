@@ -15,7 +15,7 @@
             android:icon="@drawable/barrita2"
             android:title="Tarifa" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_informe"
             android:icon="@drawable/barrita2"
             android:title="Informe" />
         <item
@@ -26,5 +26,6 @@
             android:id="@+id/configuracionFragment"
             android:icon="@drawable/barrita2"
             android:title="Configuracion" />
+
     </group>
 </menu>

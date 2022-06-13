@@ -13,7 +13,7 @@
         android:gravity="center"
         android:text="Historico"
         android:textColor="@color/black"
-        android:textSize="30dp"
+        android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,8 +23,8 @@
         android:id="@+id/BuscarText"
         android:layout_width="70dp"
         android:layout_height="40dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="148dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="132dp"
         android:gravity="center"
         android:text="Buscar:"
         android:textColor="@color/black"
@@ -36,34 +36,46 @@
         android:id="@+id/BuscadorEditText"
         android:layout_width="220dp"
         android:layout_height="40dp"
-        android:layout_marginTop="148dp"
         android:background="@drawable/lineadobarra"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.68"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/HistoricoText" />
+        app:layout_constraintTop_toTopOf="@+id/BuscarText" />
 
     <Spinner
         android:layout_width="150dp"
-        android:layout_height="40dp"
+        android:layout_height="35dp"
         android:layout_marginTop="76dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/HistoricoText" />
 
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="212dp"
+        android:text="Chapa"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.084"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/HistoricoText" />
+
     <LinearLayout
         android:layout_width="388dp"
-        android:layout_height="424dp"
-        android:background="@drawable/boton_redondo"
+        android:layout_height="400dp"
+        android:background="@drawable/boton_redondo_sin_color"
+        android:backgroundTint="@color/personalizado"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.85"
-        >
+        app:layout_constraintVertical_bias="0.869">
 
     </LinearLayout>
 

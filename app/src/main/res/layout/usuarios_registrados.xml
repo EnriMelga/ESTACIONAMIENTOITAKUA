@@ -27,8 +27,8 @@
         android:textColor="@color/black"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.111"
-        app:layout_constraintStart_toStartOf="@+id/textView10"
+        app:layout_constraintHorizontal_bias="0.346"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView10" />
 
     <TextView
@@ -40,25 +40,25 @@
         android:textColor="@color/black"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.217"
+        app:layout_constraintHorizontal_bias="0.235"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/RegistrarPagoText" />
 
     <Button
-        android:layout_width="150dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="46dp"
+        android:layout_width="157dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="45dp"
         android:background="@drawable/boton_redondo_sin_color"
         android:backgroundTint="@color/personalizado"
-        android:text="Crear Nuevo Usuario"
         android:drawableLeft="@drawable/ic_baseline_edit_24"
-        android:paddingStart="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
         android:gravity="center"
+        android:paddingStart="15dp"
+        android:text="Crear Nuevo Usuario"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/linearLayout"
         android:layout_width="384dp"
         android:layout_height="380dp"
@@ -72,6 +72,44 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.5">
 
-    </LinearLayout>
+        <ImageButton
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="50dp"
+            app:srcCompat="@drawable/ic_baseline_edit_24" />
+
+        <ImageButton
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="340dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="50dp"
+            app:srcCompat="@drawable/ic_baseline_delete_24" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="50dp"
+            android:gravity="center"
+            android:text="Oscar"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="190dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="50dp"
+            android:gravity="center"
+            android:text="*******"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -20,10 +20,10 @@
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.dme.itakua.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_informe"
+        android:name="com.dme.itakua.ui.informe.InformeFragment"
+        android:label="@string/menu_informe"
+        tools:layout="@layout/fragment_informe" />
     <activity
         android:id="@+id/pantallaTarifa2"
         android:name="com.dme.itakua.PantallaTarifa"
@@ -34,4 +34,14 @@
         android:name="com.dme.itakua.ConfiguracionFragment"
         android:label="Configuracion"
         tools:layout="@layout/fragment_configuracion" />
+    <fragment
+        android:id="@+id/informeFuncionarioFragment"
+        android:name="com.dme.itakua.InformeFuncionarioFragment"
+        android:label="fragment_informe_funcionario"
+        tools:layout="@layout/fragment_informe_funcionario" />
+    <fragment
+        android:id="@+id/configuracionFuncionariosFragment"
+        android:name="com.dme.itakua.ConfiguracionFuncionariosFragment"
+        android:label="fragment_configuracion_funcionarios"
+        tools:layout="@layout/fragment_configuracion_funcionarios" />
 </navigation>

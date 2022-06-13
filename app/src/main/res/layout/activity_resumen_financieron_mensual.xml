@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="230dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="36dp"
+        android:text="          Resumen Financiero Mensual"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="408dp"
+        android:text="TOTAL:"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.422"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout2" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="170dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="408dp"
+        android:background="@drawable/boton_redondo_sin_color"
+        android:backgroundTint="@color/personalizado"
+        android:gravity="right"
+        android:inputType="number"
+        android:paddingEnd="15dp"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.887"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout2" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@drawable/boton_redondo_sin_color"
+        android:backgroundTint="@color/personalizado"
+        android:text="Volver"
+        tools:layout_editor_absoluteX="259dp"
+        tools:layout_editor_absoluteY="640dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="388dp"
+        android:layout_height="400dp"
+        android:background="@drawable/boton_redondo_sin_color"
+        android:backgroundTint="@color/personalizado"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498">
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

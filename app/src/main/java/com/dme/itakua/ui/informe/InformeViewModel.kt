@@ -1,13 +1,13 @@
-package com.dme.itakua.ui.slideshow
+package com.dme.itakua.ui.informe
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class SlideshowViewModel : ViewModel() {
+class InformeViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is slideshow Fragment"
+        value = "This is informe Fragment"
     }
     val text: LiveData<String> = _text
 }
