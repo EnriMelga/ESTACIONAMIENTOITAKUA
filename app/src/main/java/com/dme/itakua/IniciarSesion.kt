@@ -1,9 +1,11 @@
 package com.dme.itakua
 
+import android.app.ProgressDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import com.android.volley.*
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
@@ -19,7 +21,8 @@ class IniciarSesion : AppCompatActivity() {
         binding = IniciarSesionBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.BtnConfirmarInicio.setOnClickListener{
-          validarInicioSesion() //Llamada a validacion
+            invocionLoading()
+            validarInicioSesion() //Llamada a validacion
         }
     }
 
@@ -40,6 +43,8 @@ class IniciarSesion : AppCompatActivity() {
             Toast.makeText(applicationContext,obj.getString("message"),Toast.LENGTH_LONG).show()
             if(obj.getString("error").equals("false")){ //Inicio de Sesion validado
                 startActivity(Intent(this,PantallaInicio::class.java))
+            }else{
+                startActivity(Intent(this,IniciarSesion::class.java))
             }
 
         }, Response.ErrorListener { error ->
@@ -55,6 +60,14 @@ class IniciarSesion : AppCompatActivity() {
         }
         requestQueue.add(stringRequest)
         }
+    //Llama para mostrar loading de verificacion
+    fun invocionLoading(){
+        val progressDialog = ProgressDialog(this@IniciarSesion)
+        progressDialog.setTitle("")
+        progressDialog.setMessage("Verificando...")
+        progressDialog.show()
+    }
+
     }
 
 

@@ -175,28 +175,20 @@
         app:layout_constraintStart_toStartOf="@+id/MontoText"
         app:layout_constraintTop_toTopOf="@+id/VencimientoEditText" />
 
+
     <Button
         android:id="@+id/ImprimirRegistro"
-        android:layout_width="100dp"
+        android:layout_width="150dp"
         android:layout_height="40dp"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="68dp"
         android:background="@drawable/boton_impresora"
+        android:drawableLeft="@drawable/ic_baseline_print_35"
+        android:paddingStart="12dp"
         android:text="Imprimir"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.581"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/MontoEditText" />
-
-    <ImageView
-        android:id="@+id/ImagenImpresora"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="104dp"
-        android:layout_marginEnd="168dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.694"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/MontoText"
-        app:srcCompat="@drawable/ic_baseline_print_24" />
+        app:layout_constraintTop_toBottomOf="@+id/MontoEditText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

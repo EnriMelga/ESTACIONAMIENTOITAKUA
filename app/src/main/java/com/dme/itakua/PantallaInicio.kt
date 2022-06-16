@@ -1,7 +1,9 @@
 package com.dme.itakua
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
@@ -37,7 +39,6 @@ class PantallaInicio : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_content_pantalla_inicio)
 
 
-
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
@@ -55,10 +56,33 @@ class PantallaInicio : AppCompatActivity() {
         return true
     }
 
+    //Logica al pulsar menu superior derecho
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val id:Int = item.itemId
+
+        if(id == R.id.Btn_Cambiar_de_Usuario){
+            //Pulsa cambiar de Usuario
+            AlertDialog.Builder(this@PantallaInicio)
+                .setMessage("¿Cambiar de Usuario?")
+                .setCancelable(false)
+                .setPositiveButton("Si") { dialog, whichButton ->
+                    //Vuelve a pantalla de Iniciar Sesion
+                    startActivity(Intent(this,IniciarSesion::class.java))
+                }
+                .setNegativeButton("Cancelar") { dialog, whichButton ->
+                }
+                .show()
+            return true
+        }
+    return super.onOptionsItemSelected(item)
+    }
+
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_pantalla_inicio)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
+
+
 
     //Mensaje de confirmacion de salida en el Menu prinicipal
     override fun onBackPressed() {

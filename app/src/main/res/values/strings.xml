@@ -28,7 +28,17 @@
         <item>Por Semana</item>
         <item>Por Mes</item>
     </string-array>
+
+    <string-array name="buscar_historico">
+        <item>Chapa</item>
+        <item>Entrada</item>
+        <item>Salida</item>
+        <item>Monto</item>
+        <item>Tarifa</item>
+    </string-array>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cambiar_de_usuario">Cambiar de Usuario</string>
 
 </resources>

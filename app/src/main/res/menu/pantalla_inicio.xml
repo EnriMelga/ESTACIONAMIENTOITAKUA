@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
     <item
         android:id="@+id/Btn_Cambiar_de_Usuario"
         android:orderInCategory="100"
-        android:title="Cambiar de Usuario"
+        android:title="@string/cambiar_de_usuario"
         app:showAsAction="never"/>
 </menu>
