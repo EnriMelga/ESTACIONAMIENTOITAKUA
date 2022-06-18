@@ -9,6 +9,7 @@ import androidx.appcompat.app.AlertDialog
 import com.android.volley.*
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
+import com.dme.itakua.core.Constants
 import com.dme.itakua.databinding.IniciarSesionBinding
 import org.json.JSONException
 import org.json.JSONObject
@@ -33,7 +34,7 @@ class IniciarSesion : AppCompatActivity() {
         val ContraseñaUsuario: String = binding.Password.text.toString()
 
         //URL de la API en el Servidor
-        var url = "http://192.168.56.1/estacionamiento-ita-kua/api/api_login.php"
+        var url = Constants.SERVER_HOST+"estacionamiento-ita-kua/api/api_login.php"
 
         var requestQueue:RequestQueue=Volley.newRequestQueue(this)
         var stringRequest:StringRequest = object :StringRequest(Request.Method.POST,url,Response.Listener { response ->
