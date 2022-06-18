@@ -10,6 +10,7 @@ import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
+import com.dme.itakua.core.Constants
 import com.dme.itakua.databinding.ActivityPantallaTarifaBinding
 import com.dme.itakua.ui.home.HomeViewModel
 import org.json.JSONArray
@@ -63,9 +64,9 @@ class PantallaTarifa : AppCompatActivity() {
     private fun validarSeleccion(tipoVehiculo:String):String{
         var urldir:String
         urldir = if(tipoVehiculo=="Auto"){
-            "http://192.168.56.1/estacionamiento-ita-kua/api/api_tarifas.php?tipovehiculo=1"
+            Constants.SERVER_HOST+"estacionamiento-ita-kua/api/api_tarifas.php?tipovehiculo=1"
         }else{
-            "http://192.168.56.1/estacionamiento-ita-kua/api/api_tarifas.php?tipovehiculo=2"
+            Constants.SERVER_HOST+"estacionamiento-ita-kua/api/api_tarifas.php?tipovehiculo=2"
         }
         return urldir
     }

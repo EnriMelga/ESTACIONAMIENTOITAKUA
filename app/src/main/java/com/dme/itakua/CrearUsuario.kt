@@ -9,6 +9,7 @@ import android.widget.Toast
 import com.android.volley.*
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
+import com.dme.itakua.core.Constants
 import com.dme.itakua.databinding.ActivityCrearUsuarioBinding
 import org.json.JSONObject
 
@@ -60,7 +61,7 @@ class CrearUsuario : AppCompatActivity() {
         }
 
         //URL de la API en el Servidor
-        val url = "http://192.168.56.1/estacionamiento-ita-kua/api/api_registrarse.php"
+        val url = Constants.SERVER_HOST+"estacionamiento-ita-kua/api/api_registrarse.php"
 
         var requestQueue: RequestQueue = Volley.newRequestQueue(this)
         var stringRequest:StringRequest = object :StringRequest(Request.Method.POST,url,Response.Listener { response ->
