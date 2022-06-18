@@ -23,7 +23,4 @@
 
     <include layout="@layout/content_pantalla_inicio" />
 
-
-
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

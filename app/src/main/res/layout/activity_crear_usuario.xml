@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CrearUsuario"
-    android:background="@drawable/fondo_de_app">
+    >
 
 
     <TextView
@@ -21,18 +21,18 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.094" />
+        app:layout_constraintVertical_bias="0.075" />
 
     <TextView
         android:id="@+id/Tipo"
         android:layout_width="60dp"
         android:layout_height="32dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="68dp"
         android:text="Tipo"
         android:textColor="@color/black"
-        android:textSize="17dp"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintHorizontal_bias="0.27"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/CreateUserText" />
 
@@ -41,26 +41,25 @@
         android:layout_width="210dp"
         android:layout_height="42dp"
         android:layout_marginStart="90dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="60dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.322"
-        app:layout_constraintStart_toStartOf="@+id/Tipo"
+        app:layout_constraintHorizontal_bias="0.648"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/CreateUserText" />
 
     <EditText
         android:id="@+id/CrearNuevoUsuario"
-        android:layout_width="380dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="40dp"
-        android:background="#30ffffff"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/lineadobarra"
         android:textColor="@color/black"
-        android:textColorHint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.035"
 
         />
 
@@ -72,36 +71,36 @@
         android:text="Nombre de Usuario"
         android:textColor="@color/black"
         android:textSize="17dp"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.068"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/CreateUserText" />
 
     <EditText
         android:id="@+id/CrearUsuario"
-        android:layout_width="380dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="40dp"
-        android:background="#30ffffff"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/lineadobarra"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="230dp"
         android:layout_height="32dp"
         android:layout_marginTop="56dp"
+        android:gravity="center"
         android:text="Nombre de Usuario Completo"
         android:textColor="@color/black"
         android:textSize="17dp"
         app:layout_constraintEnd_toEndOf="parent"
-
-        app:layout_constraintHorizontal_bias="0.099"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/CrearNuevoUsuario" />
 
@@ -110,13 +109,15 @@
         android:layout_width="136dp"
         android:layout_height="54dp"
         android:layout_marginTop="68dp"
-        android:background="@drawable/boton_redondo"
+
         android:hint="Guardar"
         android:textColor="@color/black"
         android:textSize="18dp"
         android:textStyle="bold"
+        android:background="@drawable/boton_redondo_sin_color"
+        android:backgroundTint="#64B5F6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.938"
+        app:layout_constraintHorizontal_bias="0.858"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/ConfirmarContraseña" />
 
@@ -126,23 +127,25 @@
         android:layout_height="33dp"
         android:layout_marginTop="60dp"
         android:text="Contraseña"
+        android:gravity="center"
         android:textColor="@color/black"
         android:textSize="17dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/CrearUsuario" />
 
     <EditText
         android:id="@+id/CrearContraseña"
-        android:layout_width="380dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="40dp"
-        android:background="#30ffffff"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/lineadobarra"
         android:inputType="textPassword"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/Contraseña" />
 
@@ -154,22 +157,23 @@
         android:text="Confirmar Contraseña"
         android:textColor="@color/black"
         android:textSize="17dp"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/CrearContraseña" />
 
     <EditText
         android:id="@+id/ConfirmarContraseña"
-        android:layout_width="380dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="40dp"
-        android:background="#30ffffff"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/lineadobarra"
         android:inputType="textPassword"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/ConfirmarContraseñaText" />
 

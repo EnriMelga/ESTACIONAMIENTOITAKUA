@@ -13,6 +13,8 @@
         <entry key="..\:/Users/Enrique M/AndroidStudioProjects/EstacionamientoItaKua/app/src/main/res/drawable/ic_baseline_print_35.xml" value="0.1495" />
         <entry key="..\:/Users/Enrique M/AndroidStudioProjects/EstacionamientoItaKua/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1945" />
         <entry key="..\:/Users/Enrique M/AndroidStudioProjects/EstacionamientoItaKua/app/src/main/res/drawable/lineadobarra.xml" value="0.148" />
+        <entry key="..\:/Users/Enrique M/AndroidStudioProjects/EstacionamientoItaKua/app/src/main/res/drawable/moto_animacion.xml" value="0.128" />
+        <entry key="..\:/Users/Enrique M/AndroidStudioProjects/EstacionamientoItaKua/app/src/main/res/drawable/side_nav_bar.xml" value="0.128" />
         <entry key="..\:/Users/Enrique M/AndroidStudioProjects/EstacionamientoItaKua/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.1285140562248996" />
         <entry key="..\:/Users/Enrique M/AndroidStudioProjects/EstacionamientoItaKua/app/src/main/res/layout-w936dp/activity_login.xml" value="0.12807377049180327" />
         <entry key="..\:/Users/Enrique M/AndroidStudioProjects/EstacionamientoItaKua/app/src/main/res/layout/IniciarSesion.xml" value="0.1" />
@@ -24,6 +26,7 @@
         <entry key="..\:/Users/Enrique M/AndroidStudioProjects/EstacionamientoItaKua/app/src/main/res/layout/activity_main.xml" value="0.21" />
         <entry key="..\:/Users/Enrique M/AndroidStudioProjects/EstacionamientoItaKua/app/src/main/res/layout/activity_main2.xml" value="0.22" />
         <entry key="..\:/Users/Enrique M/AndroidStudioProjects/EstacionamientoItaKua/app/src/main/res/layout/activity_main3.xml" value="0.22" />
+        <entry key="..\:/Users/Enrique M/AndroidStudioProjects/EstacionamientoItaKua/app/src/main/res/layout/activity_main_b.xml" value="0.17346014492753623" />
         <entry key="..\:/Users/Enrique M/AndroidStudioProjects/EstacionamientoItaKua/app/src/main/res/layout/activity_pantalla_inicio.xml" value="0.21" />
         <entry key="..\:/Users/Enrique M/AndroidStudioProjects/EstacionamientoItaKua/app/src/main/res/layout/activity_pantalla_tarifa.xml" value="0.22" />
         <entry key="..\:/Users/Enrique M/AndroidStudioProjects/EstacionamientoItaKua/app/src/main/res/layout/activity_resumen_financieron_mensual.xml" value="0.21" />
@@ -34,7 +37,7 @@
         <entry key="..\:/Users/Enrique M/AndroidStudioProjects/EstacionamientoItaKua/app/src/main/res/layout/fragment_configuracion.xml" value="0.25" />
         <entry key="..\:/Users/Enrique M/AndroidStudioProjects/EstacionamientoItaKua/app/src/main/res/layout/fragment_configuracion_funcionarios.xml" value="0.22" />
         <entry key="..\:/Users/Enrique M/AndroidStudioProjects/EstacionamientoItaKua/app/src/main/res/layout/fragment_gallery.xml" value="0.11458333333333333" />
-        <entry key="..\:/Users/Enrique M/AndroidStudioProjects/EstacionamientoItaKua/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/Users/Enrique M/AndroidStudioProjects/EstacionamientoItaKua/app/src/main/res/layout/fragment_home.xml" value="0.22" />
         <entry key="..\:/Users/Enrique M/AndroidStudioProjects/EstacionamientoItaKua/app/src/main/res/layout/fragment_informe.xml" value="0.22" />
         <entry key="..\:/Users/Enrique M/AndroidStudioProjects/EstacionamientoItaKua/app/src/main/res/layout/fragment_informe_funcionario.xml" value="0.17346014492753623" />
         <entry key="..\:/Users/Enrique M/AndroidStudioProjects/EstacionamientoItaKua/app/src/main/res/layout/fragment_slideshow.xml" value="0.11458333333333333" />
@@ -46,7 +49,7 @@
         <entry key="..\:/Users/Enrique M/AndroidStudioProjects/EstacionamientoItaKua/app/src/main/res/layout/registrar_salida.xml" value="0.21" />
         <entry key="..\:/Users/Enrique M/AndroidStudioProjects/EstacionamientoItaKua/app/src/main/res/layout/registrarvehiculo.xml" value="0.22" />
         <entry key="..\:/Users/Enrique M/AndroidStudioProjects/EstacionamientoItaKua/app/src/main/res/layout/spinner_dimensiones.xml" value="0.16983695652173914" />
-        <entry key="..\:/Users/Enrique M/AndroidStudioProjects/EstacionamientoItaKua/app/src/main/res/layout/usuarios_registrados.xml" value="0.22" />
+        <entry key="..\:/Users/Enrique M/AndroidStudioProjects/EstacionamientoItaKua/app/src/main/res/layout/usuarios_registrados.xml" value="0.21171171171171171" />
         <entry key="..\:/Users/Enrique M/AndroidStudioProjects/EstacionamientoItaKua/app/src/main/res/menu/activity_main_drawer.xml" value="0.33" />
         <entry key="..\:/Users/Enrique M/AndroidStudioProjects/EstacionamientoItaKua/app/src/main/res/menu/pantalla_inicio.xml" value="0.22" />
         <entry key="..\:/Users/Enrique M/AndroidStudioProjects/EstacionamientoItaKua/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />

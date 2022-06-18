@@ -60,10 +60,10 @@ class PantallaInicio : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val id:Int = item.itemId
 
-        if(id == R.id.Btn_Cambiar_de_Usuario){
+        if(id == R.id.Btn_Cerrar_Sesion){
             //Pulsa cambiar de Usuario
             AlertDialog.Builder(this@PantallaInicio)
-                .setMessage("¿Cambiar de Usuario?")
+                .setMessage("¿Cerrar Sesion?")
                 .setCancelable(false)
                 .setPositiveButton("Si") { dialog, whichButton ->
                     //Vuelve a pantalla de Iniciar Sesion
@@ -82,10 +82,8 @@ class PantallaInicio : AppCompatActivity() {
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
-
-
-    //Mensaje de confirmacion de salida en el Menu prinicipal
-    override fun onBackPressed() {
+    //Dialogo de confirmacion de salida en el Menu prinicipal
+    override fun onBackPressed() {//Pulsa a volver atras en el cualquier fragment
         AlertDialog.Builder(this@PantallaInicio)
             .setMessage("¿Estas seguro que desea salir?")
             .setCancelable(false)

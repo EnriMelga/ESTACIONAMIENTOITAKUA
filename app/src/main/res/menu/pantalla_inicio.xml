@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     >
     <item
-        android:id="@+id/Btn_Cambiar_de_Usuario"
+        android:id="@+id/Btn_Cerrar_Sesion"
         android:orderInCategory="100"
-        android:title="@string/cambiar_de_usuario"
+        android:title="@string/cerrar_sesion"
         app:showAsAction="never"/>
 </menu>

@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".UsuarioActivity">
 
     <TextView
         android:id="@+id/RegistrarPagoText"
@@ -45,6 +46,7 @@
         app:layout_constraintTop_toTopOf="@+id/RegistrarPagoText" />
 
     <Button
+        android:id="@+id/BtnRegistrarUsuario"
         android:layout_width="157dp"
         android:layout_height="60dp"
         android:layout_marginTop="45dp"
@@ -60,10 +62,10 @@
 
     <RelativeLayout
         android:id="@+id/linearLayout"
-        android:layout_width="384dp"
+        android:layout_width="350dp"
         android:layout_height="380dp"
         android:background="@drawable/boton_redondo_sin_color"
-        android:backgroundTint="@color/personalizado"
+        android:backgroundTint="#F0E6FF"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -83,7 +85,7 @@
         <ImageButton
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:layout_marginStart="340dp"
+            android:layout_marginStart="310dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="50dp"
             app:srcCompat="@drawable/ic_baseline_delete_24" />

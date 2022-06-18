@@ -31,7 +31,7 @@
         tools:layout="@layout/activity_pantalla_tarifa" />
     <fragment
         android:id="@+id/configuracionFragment"
-        android:name="com.dme.itakua.ConfiguracionFragment"
+        android:name="com.dme.itakua.ui.configuracion.ConfiguracionFragment"
         android:label="Configuracion"
         tools:layout="@layout/fragment_configuracion" />
     <fragment

@@ -3,9 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ConfiguracionFragment">
+    tools:context=".ui.configuracion.ConfiguracionFragment">
 
     <Button
+        android:id="@+id/BtnUsuarios"
         android:layout_width="270dp"
         android:layout_height="70dp"
         android:layout_marginStart="65dp"
@@ -21,6 +22,7 @@
         android:backgroundTint="#64B5F6"/>
 
     <Button
+        android:id="@+id/BtnModificarMontoTarifa"
         android:layout_width="270dp"
         android:layout_height="70dp"
         android:layout_marginStart="65dp"
@@ -35,6 +37,7 @@
         />
 
     <Button
+        android:id="@+id/BtnRegistrarClienteDatos"
         android:layout_width="270dp"
         android:layout_height="70dp"
         android:layout_marginStart="65dp"
