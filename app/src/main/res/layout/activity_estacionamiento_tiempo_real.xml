@@ -7,38 +7,39 @@
     tools:context=".EstacTiempoReActivity"
     >
 
-    <TextView
-        android:id="@+id/RegistrarClienteText"
-        android:layout_width="260dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="36dp"
-        android:gravity="center"
-        android:text="Estacionamiento en Tiempo Real"
-        android:textColor="@color/black"
-        android:textSize="27dp"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarPruba"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:popupTheme="@style/Theme.EstacionamientoItaKua.PopupOverlay"
+        app:title="           Modificar Monto"
+        app:titleTextColor="@color/white" />
 
     <TextView
         android:id="@+id/SaldoText"
         android:layout_width="90dp"
         android:layout_height="40dp"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="116dp"
+        android:layout_marginTop="104dp"
         android:gravity="center"
         android:text="TOTAL:"
         android:textColor="@color/black"
         android:textSize="22dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/RegistrarClienteText" />
+        app:layout_constraintTop_toTopOf="@+id/toolbarPruba" />
 
     <TextView
         android:id="@+id/Monto_de_Saldo"
         android:layout_width="100dp"
         android:layout_height="40dp"
-        android:layout_marginTop="116dp"
+        android:layout_marginTop="104dp"
         android:background="@drawable/boton_impresora"
         android:backgroundTint="@color/personalizado"
         android:gravity="right"
@@ -50,44 +51,45 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.668"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/RegistrarClienteText" />
+        app:layout_constraintTop_toTopOf="@+id/toolbarPruba" />
 
     <TextView
         android:id="@+id/textView12"
         android:layout_width="80dp"
         android:layout_height="30dp"
-        android:layout_marginTop="185dp"
+        android:layout_marginTop="81dp"
         android:text="Chapa"
         android:textColor="@color/black"
         android:textSize="22dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.114"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/RegistrarClienteText" />
+        app:layout_constraintTop_toTopOf="@+id/SaldoText" />
 
     <TextView
         android:layout_width="80dp"
         android:layout_height="30dp"
-        android:layout_marginTop="185dp"
+        android:layout_marginTop="81dp"
         android:text="Entrada"
         android:textColor="@color/black"
         android:textSize="22dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/RegistrarClienteText" />
+        app:layout_constraintTop_toTopOf="@+id/SaldoText" />
 
     <TextView
         android:id="@+id/textView11"
         android:layout_width="60dp"
         android:layout_height="30dp"
-        android:layout_marginTop="185dp"
+        android:layout_marginTop="81dp"
         android:text="Tarifa"
         android:textColor="@color/black"
         android:textSize="22dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.877"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/RegistrarClienteText" />
+        app:layout_constraintTop_toTopOf="@+id/SaldoText" />
 
     <Button
         android:layout_width="150dp"
@@ -112,6 +114,6 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.705" />
+        app:layout_constraintVertical_bias="0.639" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

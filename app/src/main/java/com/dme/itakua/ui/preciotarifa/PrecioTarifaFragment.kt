@@ -1,17 +1,16 @@
-package com.dme.itakua.ui.gallery
+package com.dme.itakua.ui.preciotarifa
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.dme.itakua.databinding.FragmentGalleryBinding
+import com.dme.itakua.databinding.FragmentPrecioTarifaBinding
 
-class GalleryFragment : Fragment() {
+class PrecioTarifaFragment : Fragment() {
 
-    private var _binding: FragmentGalleryBinding? = null
+    private var _binding: FragmentPrecioTarifaBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -23,14 +22,11 @@ class GalleryFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val galleryViewModel =
-            ViewModelProvider(this).get(GalleryViewModel::class.java)
+            ViewModelProvider(this).get(PrecioTarifaViewModel::class.java)
 
-        _binding = FragmentGalleryBinding.inflate(inflater, container, false)
+        _binding = FragmentPrecioTarifaBinding.inflate(inflater, container, false)
         val root: View = binding.root
-        val textView: TextView = binding.textGallery
-        galleryViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
+
         return root
     }
 

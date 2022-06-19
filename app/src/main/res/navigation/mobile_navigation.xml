@@ -12,23 +12,17 @@
         android:name="com.dme.itakua.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
-
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.dme.itakua.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_precio_tarifa"
+        android:name="com.dme.itakua.ui.preciotarifa.PrecioTarifaFragment"
+        android:label="@string/menu_precio_tarifa"
+        tools:layout="@layout/fragment_precio_tarifa" />
 
     <fragment
         android:id="@+id/nav_informe"
         android:name="com.dme.itakua.ui.informe.InformeFragment"
         android:label="@string/menu_informe"
         tools:layout="@layout/fragment_informe" />
-    <activity
-        android:id="@+id/pantallaTarifa2"
-        android:name="com.dme.itakua.PantallaTarifa"
-        android:label="activity_pantalla_tarifa"
-        tools:layout="@layout/activity_pantalla_tarifa" />
     <fragment
         android:id="@+id/configuracionFragment"
         android:name="com.dme.itakua.ui.configuracion.ConfiguracionFragment"
@@ -44,4 +38,9 @@
         android:name="com.dme.itakua.ConfiguracionFuncionariosFragment"
         android:label="fragment_configuracion_funcionarios"
         tools:layout="@layout/fragment_configuracion_funcionarios" />
+    <fragment
+        android:id="@+id/salidaFragment"
+        android:name="com.dme.itakua.SalidaFragment"
+        android:label="Salida"
+        tools:layout="@layout/fragment_salida" />
 </navigation>

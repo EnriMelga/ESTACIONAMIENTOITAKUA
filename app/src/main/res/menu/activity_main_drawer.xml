@@ -7,25 +7,24 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:title="Salida"
+            android:title="Menu Principal"
             android:icon="@drawable/barrita2"
             />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/salidaFragment"
             android:icon="@drawable/barrita2"
-            android:title="Tarifa" />
+            android:title="Salida" />
+        <item
+            android:id="@+id/nav_precio_tarifa"
+            android:icon="@drawable/barrita2"
+            android:title="Precio de Tarifa" />
         <item
             android:id="@+id/nav_informe"
             android:icon="@drawable/barrita2"
             android:title="Informe" />
         <item
-            android:id="@+id/pantallaTarifa2"
-            android:icon="@drawable/barrita2"
-            android:title="Pantalla Tarifa"/>
-        <item
             android:id="@+id/configuracionFragment"
             android:icon="@drawable/barrita2"
             android:title="Configuracion" />
-
     </group>
 </menu>

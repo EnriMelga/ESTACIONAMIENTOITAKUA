@@ -4,168 +4,142 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PantallaTarifa"
+    tools:context=".ui.preciotarifa.PrecioTarifaFragment">
 
-    >
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbarPruba"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:popupTheme="@style/Theme.EstacionamientoItaKua.PopupOverlay"
-        app:title="           Modificar Monto"
-        app:titleTextColor="@color/white" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="60dp"
         android:layout_height="30dp"
-        android:layout_marginTop="136dp"
         android:text="Tipo"
+        android:layout_marginTop="40dp"
         android:textColor="@color/black"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.364"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/toolbarPruba" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
         android:id="@+id/tipoDeVehiculo"
         android:layout_width="178dp"
         android:layout_height="51dp"
         android:layout_marginStart="68dp"
-        android:layout_marginTop="122dp"
+        android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView3"
-        app:layout_constraintTop_toTopOf="@+id/toolbarPruba" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="72dp"
         android:layout_height="37dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="84dp"
-        android:text="Hora:"
+        android:layout_marginTop="70dp"
+        android:text="Hora"
+        android:gravity="center"
         android:textColor="@color/black"
         android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView3" />
 
-    <EditText
+    <TextView
         android:id="@+id/horaTarifa"
         android:layout_width="191dp"
         android:layout_height="36dp"
-        android:layout_marginStart="130dp"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="60dp"
         android:background="@drawable/lineadobarra"
-        android:textSize="25dp"
         android:gravity="center"
-        android:inputType="number"
         android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@+id/textView6"
-        app:layout_constraintTop_toTopOf="@+id/tipoDeVehiculo" />
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView6" />
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="55dp"
         android:layout_height="37dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="80dp"
-        android:text="Dia:"
+        android:layout_marginTop="60dp"
+        android:text="Dia"
+        android:gravity="center"
         android:textColor="@color/black"
         android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView6" />
+        app:layout_constraintTop_toTopOf="@+id/horaTarifa" />
 
-    <EditText
+    <TextView
         android:id="@+id/diaTarifa"
         android:layout_width="191dp"
         android:layout_height="36dp"
-        android:layout_marginStart="130dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="60dp"
         android:background="@drawable/lineadobarra"
-        android:textSize="25dp"
         android:gravity="center"
-        android:inputType="number"
         android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@+id/textView7"
-        app:layout_constraintTop_toTopOf="@+id/horaTarifa" />
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView7" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="98dp"
         android:layout_height="37dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="80dp"
-        android:text="Semana:"
+        android:layout_marginTop="60dp"
+        android:text="Semana"
         android:textColor="@color/black"
         android:textSize="20dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView7" />
+        app:layout_constraintTop_toTopOf="@+id/diaTarifa" />
 
-    <EditText
+    <TextView
         android:id="@+id/semanaTarifa"
         android:layout_width="191dp"
         android:layout_height="36dp"
-        android:layout_marginStart="130dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="56dp"
         android:background="@drawable/lineadobarra"
-        android:textSize="25dp"
         android:gravity="center"
-        android:inputType="number"
         android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@+id/textView8"
-        app:layout_constraintTop_toTopOf="@+id/diaTarifa" />
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView8" />
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="68dp"
         android:layout_height="37dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="80dp"
-        android:text="Mes:"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="64dp"
+        android:text="Mes"
+        android:gravity="center"
         android:textColor="@color/black"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView8" />
+        app:layout_constraintTop_toTopOf="@+id/semanaTarifa" />
 
-    <EditText
+    <TextView
         android:id="@+id/mesTarifa"
         android:layout_width="191dp"
         android:layout_height="36dp"
-        android:layout_marginStart="130dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="60dp"
         android:background="@drawable/lineadobarra"
-        android:inputType="number"
+        android:gravity="center"
         android:textColor="@color/black"
         android:textSize="25dp"
-        android:gravity="center"
-        app:layout_constraintStart_toStartOf="@+id/textView9"
-        app:layout_constraintTop_toTopOf="@+id/semanaTarifa"
-        />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="120dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="100dp"
-        android:background="@drawable/boton_redondo_sin_color"
-        android:backgroundTint="#0000FF"
-        android:text="Guardar"
-        android:textColor="@color/white"
-        android:textSize="14dp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/mesTarifa" />
-
+        app:layout_constraintTop_toTopOf="@+id/textView9" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

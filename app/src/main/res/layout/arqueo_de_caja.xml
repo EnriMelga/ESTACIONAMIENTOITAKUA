@@ -6,38 +6,39 @@
     android:layout_height="match_parent"
     tools:context=".ArqueodeCaja">
 
-    <TextView
-        android:id="@+id/ModificarMonto"
-        android:layout_width="220dp"
-        android:layout_height="58dp"
-        android:layout_marginTop="44dp"
-        android:gravity="center"
-        android:text="Arqueo de Caja"
-        android:textColor="@color/black"
-        android:textSize="30dp"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarPruba"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:popupTheme="@style/Theme.EstacionamientoItaKua.PopupOverlay"
+        app:title="           Arqueo de Caja"
+        app:titleTextColor="@color/white" />
 
     <TextView
         android:id="@+id/SaldoText"
         android:layout_width="150dp"
         android:layout_height="40dp"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="100dp"
         android:text="Saldo Inicial:"
         android:textColor="@color/black"
         android:textSize="25dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/ModificarMonto" />
+        app:layout_constraintTop_toTopOf="@+id/toolbarPruba" />
 
     <TextView
         android:id="@+id/Monto_de_Saldo"
         android:layout_width="170dp"
         android:layout_height="40dp"
         android:layout_marginStart="208dp"
-        android:layout_marginTop="123dp"
+        android:layout_marginTop="100dp"
         android:background="@drawable/boton_impresora"
         android:backgroundTint="@color/personalizado"
         android:gravity="right"
@@ -49,7 +50,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.015" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:layout_width="50dp"
@@ -86,7 +87,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.657">
+        app:layout_constraintVertical_bias="0.578">
 
         <TextView
             android:layout_width="70dp"

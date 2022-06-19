@@ -7,9 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
-import com.dme.itakua.CrearUsuario
-import com.dme.itakua.ResumenFinancieroMensual
-import com.dme.itakua.UsuarioActivity
+import com.dme.itakua.*
 import com.dme.itakua.databinding.FragmentConfiguracionBinding
 
 class ConfiguracionFragment : Fragment() {
@@ -32,6 +30,13 @@ class ConfiguracionFragment : Fragment() {
         val root: View = binding.root
         binding.BtnUsuarios.setOnClickListener {
             startActivity(Intent(activity, UsuarioActivity::class.java))
+        }
+        binding.BtnModificarMontoTarifa.setOnClickListener {
+            startActivity(Intent(activity, PantallaTarifa::class.java))
+        }
+        binding.BtnRegistrarClienteDatos.setOnClickListener {
+            startActivity(Intent(activity, RegistrarCliente::class.java))
+
         }
         return root
     }

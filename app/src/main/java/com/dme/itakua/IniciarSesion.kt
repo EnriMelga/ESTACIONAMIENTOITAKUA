@@ -22,8 +22,9 @@ class IniciarSesion : AppCompatActivity() {
         binding = IniciarSesionBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.BtnConfirmarInicio.setOnClickListener{
-            invocionLoading()
-            validarInicioSesion() //Llamada a validacion
+            startActivity(Intent(this,PantallaInicio::class.java))
+            //invocionLoading()
+            //validarInicioSesion() //Llamada a validacion
         }
     }
 
@@ -61,7 +62,8 @@ class IniciarSesion : AppCompatActivity() {
         }
         requestQueue.add(stringRequest)
         }
-    //Llama para mostrar loading de verificacion
+
+    //Funcion para mostrar loading de verificacion
     fun invocionLoading(){
         val progressDialog = ProgressDialog(this@IniciarSesion)
         progressDialog.setTitle("")
