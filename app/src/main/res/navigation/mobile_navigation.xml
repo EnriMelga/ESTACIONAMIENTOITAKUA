@@ -44,4 +44,9 @@
         android:name="com.dme.itakua.ConfiguracionFuncionariosFragment"
         android:label="fragment_configuracion_funcionarios"
         tools:layout="@layout/fragment_configuracion_funcionarios" />
+    <fragment
+        android:id="@+id/salidaFragment"
+        android:name="com.dme.itakua.SalidaFragment"
+        android:label="fragment_salida"
+        tools:layout="@layout/fragment_salida" />
 </navigation>

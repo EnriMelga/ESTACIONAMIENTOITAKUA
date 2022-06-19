@@ -4,35 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    
->
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbarPruba"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:popupTheme="@style/Theme.EstacionamientoItaKua.PopupOverlay"
-        app:title="           Salida"
-        app:titleTextColor="@color/white" />
+    tools:context=".SalidaFragment">
 
     <TextView
         android:id="@+id/NumerodePlacaText"
         android:layout_width="170dp"
         android:layout_height="30dp"
-        android:layout_marginTop="144dp"
+        android:layout_marginTop="92dp"
         android:text="Numero de Placa:"
         android:textColor="@color/black"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/toolbarPruba" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/NumerodePlaca"

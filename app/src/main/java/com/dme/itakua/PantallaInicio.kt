@@ -44,6 +44,7 @@ class PantallaInicio : AppCompatActivity() {
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.nav_home, R.id.nav_gallery, R.id.nav_informe,R.id.pantallaTarifa2,R.id.configuracionFragment
+                ,R.id.salidaFragment
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)

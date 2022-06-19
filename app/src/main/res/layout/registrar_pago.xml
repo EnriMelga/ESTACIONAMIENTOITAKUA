@@ -6,24 +6,26 @@
     android:layout_height="match_parent"
     >
 
-    <TextView
-        android:id="@+id/RegistrarPagoText"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="56dp"
-        android:text="Registro de Pagos"
-        android:textColor="@color/black"
-        android:textSize="30dp"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarPruba"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:popupTheme="@style/Theme.EstacionamientoItaKua.PopupOverlay"
+        app:title="           Modificar Monto"
+        app:titleTextColor="@color/white" />
 
     <EditText
         android:id="@+id/CI_EditText"
         android:layout_width="220dp"
         android:layout_height="40dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="130dp"
         android:background="@drawable/lineadobarra"
         android:inputType="number"
         android:textColor="@color/black"
@@ -31,22 +33,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.931"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/RegistrarPagoText" />
+        app:layout_constraintTop_toTopOf="@+id/toolbarPruba" />
 
     <TextView
         android:id="@+id/CI_text"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="130dp"
         android:layout_marginEnd="154dp"
         android:text="CI:"
         android:textColor="@color/black"
-        android:textSize="25dp"
 
+        android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.046"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/RegistrarPagoText" />
+        app:layout_constraintTop_toTopOf="@+id/toolbarPruba" />
 
     <EditText
         android:id="@+id/Nombre_Edit_text"

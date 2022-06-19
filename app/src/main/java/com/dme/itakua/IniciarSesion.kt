@@ -61,7 +61,8 @@ class IniciarSesion : AppCompatActivity() {
         }
         requestQueue.add(stringRequest)
         }
-    //Llama para mostrar loading de verificacion
+
+    //Funcion para mostrar loading de verificacion
     fun invocionLoading(){
         val progressDialog = ProgressDialog(this@IniciarSesion)
         progressDialog.setTitle("")

@@ -7,9 +7,14 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:title="Salida"
+            android:title="Menu Principal"
             android:icon="@drawable/barrita2"
             />
+
+        <item
+            android:id="@+id/salidaFragment"
+            android:icon="@drawable/barrita2"
+            android:title="Salida" />
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/barrita2"
@@ -26,6 +31,8 @@
             android:id="@+id/configuracionFragment"
             android:icon="@drawable/barrita2"
             android:title="Configuracion" />
+
+
 
     </group>
 </menu>
