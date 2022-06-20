@@ -22,9 +22,8 @@ class IniciarSesion : AppCompatActivity() {
         binding = IniciarSesionBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.BtnConfirmarInicio.setOnClickListener{
-            startActivity(Intent(this,PantallaInicio::class.java))
-            //invocionLoading()
-            //validarInicioSesion() //Llamada a validacion
+            invocionLoading()
+            validarInicioSesion() //Llamada a validacion
         }
     }
 
@@ -51,6 +50,7 @@ class IniciarSesion : AppCompatActivity() {
 
         }, Response.ErrorListener { error ->
             Toast.makeText(this,error.message,Toast.LENGTH_LONG).show()
+            startActivity(Intent(this,IniciarSesion::class.java))
         }){
             //Envio de los datos al Servidor
             override fun getParams(): MutableMap<String, String>? {

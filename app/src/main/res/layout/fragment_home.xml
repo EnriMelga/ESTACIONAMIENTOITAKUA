@@ -14,7 +14,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/horaTarifa" />
+        app:layout_constraintTop_toTopOf="@+id/horaTarifa"
+        />
 
     <TextView
         android:layout_width="90dp"
@@ -60,14 +61,13 @@
         app:layout_constraintHorizontal_bias="0.526"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/Servicio_por"
-        app:srcCompat="@drawable/auto_estacionamiento2" />
+        android:src="@drawable/auto_estacionamiento2" />
 
     <ImageButton
         android:id="@+id/motoBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="88dp"
-        android:onClick="@drawable/moto_animacion"
         android:src="@drawable/moto_estacionamiento2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.706"
