@@ -10,7 +10,11 @@ import com.android.volley.*
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.dme.itakua.core.Constants
+import com.dme.itakua.core.showToast
 import com.dme.itakua.databinding.IniciarSesionBinding
+import com.dme.itakua.model.data.Userdata
+import com.google.gson.Gson
+import com.google.gson.GsonBuilder
 import org.json.JSONException
 import org.json.JSONObject
 import com.android.volley.toolbox.JsonObjectRequest as JsonObjectRequest1
@@ -44,6 +48,14 @@ class IniciarSesion : AppCompatActivity() {
             Toast.makeText(applicationContext,obj.getString("message"),Toast.LENGTH_LONG).show()
             if(obj.getString("error").equals("false")){ //Inicio de Sesion validado
                 startActivity(Intent(this,PantallaInicio::class.java))
+                obj.get("userdata")
+//                val currentUser = Userdata()
+                val builder = GsonBuilder()
+
+                val currentUser = builder.create().fromJson(obj.getString("userdata"), Userdata::class.java)
+                showToast(currentUser.tipousuario)
+                println("USERDATA TIPOUS: " + currentUser.tipousuario)
+//                val topic = gson.fromJson(json, Topic::class.java)
             }else{
                 startActivity(Intent(this,IniciarSesion::class.java))
             }
