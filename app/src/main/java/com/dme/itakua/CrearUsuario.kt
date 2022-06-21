@@ -33,7 +33,7 @@ class CrearUsuario : AppCompatActivity() {
         binding.TipoUsuarioSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
 
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-                Toast.makeText(this@CrearUsuario,"Has seleccionado " +tipoUsuario[p2],Toast.LENGTH_LONG).show()
+
             }
             override fun onNothingSelected(p0: AdapterView<*>?) {
                 TODO("Not yet implemented")

@@ -48,21 +48,26 @@ class IniciarSesion : AppCompatActivity() {
             Toast.makeText(applicationContext,obj.getString("message"),Toast.LENGTH_LONG).show()
             if(obj.getString("error").equals("false")){ //Inicio de Sesion validado
                 startActivity(Intent(this,PantallaInicio::class.java))
+                finish()
                 obj.get("userdata")
-//                val currentUser = Userdata()
                 val builder = GsonBuilder()
 
-                val currentUser = builder.create().fromJson(obj.getString("userdata"), Userdata::class.java)
-                showToast(currentUser.tipousuario)
-                println("USERDATA TIPOUS: " + currentUser.tipousuario)
+                val tempObj = builder.create().fromJson(obj.getString("userdata"), Userdata::class.java)
+                Constants.currentUser = tempObj
+                showToast(Constants.currentUser.tipousuario)
+                println("USERDATA TIPOUS: " + Constants.currentUser.tipousuario)
 //                val topic = gson.fromJson(json, Topic::class.java)
             }else{
                 startActivity(Intent(this,IniciarSesion::class.java))
+                finish()
             }
 
         }, Response.ErrorListener { error ->
-            Toast.makeText(this,error.message,Toast.LENGTH_LONG).show()
+            //Toast.makeText(this,error.message,Toast.LENGTH_LONG).show()
+            //Toast.makeText(this@IniciarSesion,"Revisa tu conexion a Internet",Toast.LENGTH_LONG).show()
             startActivity(Intent(this,IniciarSesion::class.java))
+            Toast.makeText(this@IniciarSesion,"Revisa tu conexion a Internet",Toast.LENGTH_LONG).show()
+            finish()
         }){
             //Envio de los datos al Servidor
             override fun getParams(): MutableMap<String, String>? {

@@ -12,6 +12,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.dme.itakua.IniciarSesion
 import com.dme.itakua.PantallaInicio
 import com.dme.itakua.R
+import com.dme.itakua.core.Constants
 import com.dme.itakua.databinding.FragmentHomeBinding
 
 class HomeFragment: Fragment() {
@@ -37,13 +38,13 @@ class HomeFragment: Fragment() {
         homeViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }*/
+
+        if(Constants.currentUser.idtipousuario==1){
+            binding.inputChapa.setText("Prueba admin")
+        }
         binding.spinnerTiposervicio.onItemSelectedListener =  object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-                Toast.makeText(
-                    getActivity(),
-                    "Seleccionaste " + binding.spinnerTiposervicio.selectedItem.toString(),
-                    Toast.LENGTH_LONG
-                ).show()
+              
             }
             override fun onNothingSelected(p0: AdapterView<*>?) {
                 TODO("Not yet implemented")

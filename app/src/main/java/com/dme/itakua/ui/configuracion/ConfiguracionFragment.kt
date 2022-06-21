@@ -6,8 +6,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isInvisible
+import androidx.core.view.isVisible
 import androidx.lifecycle.ViewModelProvider
 import com.dme.itakua.*
+import com.dme.itakua.core.Constants
 import com.dme.itakua.databinding.FragmentConfiguracionBinding
 
 class ConfiguracionFragment : Fragment() {
@@ -28,6 +31,16 @@ class ConfiguracionFragment : Fragment() {
 
         _binding = FragmentConfiguracionBinding.inflate(inflater, container, false)
         val root: View = binding.root
+
+        //OCULTAR BOTONES
+        if(Constants.currentUser.idtipousuario == 2){
+
+            //desactivando y ocultando btn Monto Tarifa y Usuarios
+            binding.BtnModificarMontoTarifa.isVisible = false
+            binding.BtnUsuarios.isVisible = false
+        }
+
+
         binding.BtnUsuarios.setOnClickListener {
             startActivity(Intent(activity, UsuarioActivity::class.java))
         }
@@ -35,8 +48,7 @@ class ConfiguracionFragment : Fragment() {
             startActivity(Intent(activity, PantallaTarifa::class.java))
         }
         binding.BtnRegistrarClienteDatos.setOnClickListener {
-            startActivity(Intent(activity, RegistrarCliente::class.java))
-
+            startActivity(Intent(activity, ClientesActivity::class.java))
         }
         return root
     }

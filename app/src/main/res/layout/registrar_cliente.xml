@@ -62,7 +62,8 @@
         android:background="@drawable/lineadobarra"
         android:textColor="@color/black"
         android:textSize="25dp"
-        android:gravity="center"
+        android:paddingStart="15dp"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/NombreText"
@@ -91,7 +92,8 @@
         android:background="@drawable/lineadobarra"
         android:textColor="@color/black"
         android:textSize="25dp"
-        android:gravity="center"
+        android:inputType="textPersonName"
+        android:paddingStart="15dp"
         app:layout_constraintStart_toStartOf="@+id/ApellidoText"
         app:layout_constraintTop_toTopOf="@+id/Nombre_Edit_text" />
 
@@ -154,7 +156,8 @@
         android:background="@drawable/lineadobarra"
         android:textColor="@color/black"
         android:textSize="25dp"
-        android:gravity="center"
+        android:paddingStart="15dp"
+        android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="@+id/Nro_chapa_Text"
         app:layout_constraintTop_toTopOf="@+id/TelefonoEditText" />
 
@@ -179,7 +182,8 @@
         android:background="@drawable/lineadobarra"
         android:textColor="@color/black"
         android:textSize="25dp"
-        android:gravity="center"
+        android:inputType="textPersonName"
+        android:paddingStart="15dp"
         app:layout_constraintStart_toStartOf="@+id/DireccionText"
         app:layout_constraintTop_toTopOf="@+id/Nro_chapa_EditText" />
 

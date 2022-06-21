@@ -6,9 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.dme.itakua.*
+import com.dme.itakua.core.Constants
 import com.dme.itakua.databinding.FragmentInformeBinding
 
 class InformeFragment : Fragment() {
@@ -29,6 +31,16 @@ class InformeFragment : Fragment() {
 
         _binding = FragmentInformeBinding.inflate(inflater, container, false)
         val root: View = binding.root
+
+        //OCULTAR BOTONES
+        if(Constants.currentUser.idtipousuario == 2){
+
+            //desactivando y ocultando Btn Monto Tarifa, Hitoricos y Resumen Financiero
+            binding.BtnArqueoDeCaja.isVisible = false
+            binding.BtnHistorico.isVisible = false
+            binding.BtnResumenFinancieroMensual.isVisible = false
+        }
+
         binding.BtnResumenFinancieroMensual.setOnClickListener {
             startActivity(Intent(activity,ResumenFinancieroMensual::class.java))
         }

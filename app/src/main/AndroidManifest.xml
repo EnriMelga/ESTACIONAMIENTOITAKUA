@@ -13,6 +13,9 @@
         android:theme="@style/Theme.EstacionamientoItaKua"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".ClientesActivity"
+            android:exported="false" />
+        <activity
             android:name=".FacturaLegal"
             android:exported="false" />
         <activity

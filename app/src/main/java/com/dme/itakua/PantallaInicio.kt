@@ -69,6 +69,7 @@ class PantallaInicio : AppCompatActivity() {
                 .setPositiveButton("Si") { dialog, whichButton ->
                     //Vuelve a pantalla de Iniciar Sesion
                     startActivity(Intent(this,IniciarSesion::class.java))
+                    finish()
                 }
                 .setNegativeButton("Cancelar") { dialog, whichButton ->
                 }

@@ -1,25 +1,24 @@
 package com.dme.itakua
 
 import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.webkit.WebChromeClient
-import android.webkit.WebView
 import android.webkit.WebViewClient
-import androidx.appcompat.app.AppCompatActivity
 import com.dme.itakua.core.Constants
-import com.dme.itakua.databinding.ActivityCrearUsuarioBinding
-import com.dme.itakua.databinding.UsuariosRegistradosBinding
+import com.dme.itakua.databinding.ActivityClientesBinding
+import com.dme.itakua.databinding.IniciarSesionBinding
 
-class UsuarioActivity : AppCompatActivity() {
-    private lateinit var binding:UsuariosRegistradosBinding
+class ClientesActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityClientesBinding
     override fun onCreate(savedInstanceState: Bundle?) {
-
         val BASE_URL = Constants.SERVER_HOST+"/estacionamiento-ita-kua/view/cliente/mostrarClientes.php"
         super.onCreate(savedInstanceState)
-        binding = UsuariosRegistradosBinding.inflate(layoutInflater)
+        binding = ActivityClientesBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.BtnRegistrarUsuario.setOnClickListener {
-        startActivity(Intent(this,CrearUsuario::class.java))
+
+        binding.BtnRegistrarClientes.setOnClickListener {
+            startActivity(Intent(this,RegistrarCliente::class.java))
         }
 
         binding.webListarClientes.webChromeClient = object : WebChromeClient(){
@@ -35,9 +34,8 @@ class UsuarioActivity : AppCompatActivity() {
 
         fun onBackPressed(){
 //            if(binding.webListarClientes.canGoBack()){
-                super.onBackPressed()
-  //          }
+            super.onBackPressed()
+            //          }
         }
-
-        }
+    }
 }

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UsuarioActivity">
+    tools:context=".ClientesActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarPruba"
@@ -18,12 +18,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:popupTheme="@style/Theme.EstacionamientoItaKua.PopupOverlay"
-        app:title="           Usuarios"
-        app:titleTextColor="@color/white" />
-
+        app:title="           Clientes"
+        app:titleTextColor="@color/white"
+        
+        />
 
     <Button
-        android:id="@+id/BtnRegistrarUsuario"
+        android:id="@+id/BtnRegistrarClientes"
         android:layout_width="157dp"
         android:layout_height="60dp"
         android:layout_marginTop="40dp"
@@ -32,7 +33,7 @@
         android:drawableLeft="@drawable/ic_baseline_person_add_24"
         android:gravity="center"
         android:paddingStart="15dp"
-        android:text="Crear Nuevo Usuario"
+        android:text="Crear Nuevo Cliente"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/webListarClientes" />

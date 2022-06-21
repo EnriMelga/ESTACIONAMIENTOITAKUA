@@ -31,11 +31,7 @@ class PantallaTarifa : AppCompatActivity() {
         binding.tipoDeVehiculo.onItemSelectedListener =
             object : AdapterView.OnItemSelectedListener {
                 override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-                    Toast.makeText(
-                        this@PantallaTarifa,
-                        "Seleccionaste " + rodados[p2],
-                        Toast.LENGTH_LONG
-                    ).show()
+
                     //Actualizar datos segun el tipo de vahiculo seleccionado
                     mostrarDatos(validarSeleccion(rodados[p2]))
                 }
@@ -46,7 +42,6 @@ class PantallaTarifa : AppCompatActivity() {
             }
         modificarMonto()
     }
-
 
     private fun modificarMonto() {
 
