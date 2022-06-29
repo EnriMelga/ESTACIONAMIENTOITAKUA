@@ -26,7 +26,7 @@ class IniciarSesion : AppCompatActivity() {
         binding = IniciarSesionBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.BtnConfirmarInicio.setOnClickListener{
-            invocionLoading()
+            invocionLoading()//Invoca animacion de verificando
             validarInicioSesion() //Llamada a validacion
         }
     }
@@ -51,7 +51,6 @@ class IniciarSesion : AppCompatActivity() {
                 finish()
                 obj.get("userdata")
                 val builder = GsonBuilder()
-
                 val tempObj = builder.create().fromJson(obj.getString("userdata"), Userdata::class.java)
                 Constants.currentUser = tempObj
                 showToast(Constants.currentUser.tipousuario)
@@ -63,8 +62,7 @@ class IniciarSesion : AppCompatActivity() {
             }
 
         }, Response.ErrorListener { error ->
-            //Toast.makeText(this,error.message,Toast.LENGTH_LONG).show()
-            //Toast.makeText(this@IniciarSesion,"Revisa tu conexion a Internet",Toast.LENGTH_LONG).show()
+            //Lanzar error caso tenga problemas de conexion
             startActivity(Intent(this,IniciarSesion::class.java))
             Toast.makeText(this@IniciarSesion,"Revisa tu conexion a Internet",Toast.LENGTH_LONG).show()
             finish()

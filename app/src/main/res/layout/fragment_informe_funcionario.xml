@@ -12,7 +12,7 @@
         android:layout_marginTop="220dp"
         android:background="@drawable/boton_redondo_sin_color"
         android:backgroundTint="#64B5F6"
-        android:drawableLeft="@drawable/ic_auto"
+        android:drawableLeft="@drawable/ic_auto_seleccionado"
         android:paddingStart="23dp"
         android:text="Estacionamiento            en Tiempo Real"
         android:textSize="17dp" />

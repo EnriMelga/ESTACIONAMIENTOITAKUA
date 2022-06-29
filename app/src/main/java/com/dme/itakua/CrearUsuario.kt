@@ -1,5 +1,6 @@
 package com.dme.itakua
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -25,15 +26,15 @@ class CrearUsuario : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityCrearUsuarioBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        binding.BackBTN.setOnClickListener {
+            finish()
+        }
 
         //Parte logica del sppiner
         val arrayAdapter = ArrayAdapter(this@CrearUsuario,R.layout.spinner_dimensiones,tipoUsuario)
-
         binding.TipoUsuarioSpinner.adapter = arrayAdapter
         binding.TipoUsuarioSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
-
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-
             }
             override fun onNothingSelected(p0: AdapterView<*>?) {
                 TODO("Not yet implemented")
@@ -44,6 +45,11 @@ class CrearUsuario : AppCompatActivity() {
             ConexionBDRegistrarUsuario()
         }
     }
+
+    override fun onBackPressed() {//Pulsa boton back y termina la actividad
+        finish()
+    }
+
     //Conexiones y almacenamiento con la BD
     private fun ConexionBDRegistrarUsuario(){
 

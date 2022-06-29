@@ -33,14 +33,14 @@ class InformeFragment : Fragment() {
         val root: View = binding.root
 
         //OCULTAR BOTONES
-        if(Constants.currentUser.idtipousuario == 2){
-
-            //desactivando y ocultando Btn Monto Tarifa, Hitoricos y Resumen Financiero
+        if(Constants.currentUser.idtipousuario == 2){//Es funcionario
+            //Se le desactiva y oculta los las opciones de Monto Tarifa, Hitoricos y Resumen Financiero
             binding.BtnArqueoDeCaja.isVisible = false
             binding.BtnHistorico.isVisible = false
             binding.BtnResumenFinancieroMensual.isVisible = false
         }
 
+        //Envio a las actividades de acuerdo al boton que pulse
         binding.BtnResumenFinancieroMensual.setOnClickListener {
             startActivity(Intent(activity,ResumenFinancieroMensual::class.java))
         }

@@ -24,6 +24,9 @@ class PantallaTarifa : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityPantallaTarifaBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        binding.BackBTN.setOnClickListener {
+            finish()
+        }
 
         //Parte logica del spinner
         val arrayAdapter = ArrayAdapter(this@PantallaTarifa, R.layout.spinner_dimensiones, rodados)

@@ -19,8 +19,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:popupTheme="@style/Theme.EstacionamientoItaKua.PopupOverlay"
-        app:title="           Modificar Monto"
+        app:title="         Estacionamiento a Tiempo Real"
         app:titleTextColor="@color/white" />
+
+    <ImageView
+        android:id="@+id/Back_BTN"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_baseline_arrow_back_24"
+        android:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/toolbarPruba"
+        app:layout_constraintHorizontal_bias="0.041"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/SaldoText"
@@ -90,17 +102,6 @@
         app:layout_constraintHorizontal_bias="0.877"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/SaldoText" />
-
-    <Button
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="360dp"
-        android:background="@drawable/boton_redondo_sin_color"
-        android:backgroundTint="@color/personalizado"
-        android:text="Menu Principal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout" />
 
     <RelativeLayout
         android:id="@+id/linearLayout"

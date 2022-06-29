@@ -40,7 +40,7 @@
         tools:layout="@layout/fragment_configuracion_funcionarios" />
     <fragment
         android:id="@+id/salidaFragment"
-        android:name="com.dme.itakua.SalidaFragment"
+        android:name="com.dme.itakua.ui.salida.SalidaFragment"
         android:label="Salida"
         tools:layout="@layout/fragment_salida" />
 </navigation>

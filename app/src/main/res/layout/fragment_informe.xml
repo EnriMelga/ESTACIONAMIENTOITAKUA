@@ -27,7 +27,7 @@
         android:layout_width="270dp"
         android:layout_height="70dp"
         android:layout_marginStart="65dp"
-        android:layout_marginTop="210dp"
+        android:layout_marginTop="350dp"
         android:background="@drawable/boton_redondo_sin_color"
         android:backgroundTint="#64B5F6"
         android:text="Historico                "
@@ -41,12 +41,12 @@
         android:layout_width="270dp"
         android:layout_height="70dp"
         android:layout_marginStart="65dp"
-        android:layout_marginTop="350dp"
+        android:layout_marginTop="210dp"
         android:background="@drawable/boton_redondo_sin_color"
         android:backgroundTint="#64B5F6"
         android:text="Estacionamiento            en Tiempo Real"
         android:textSize="17dp"
-        android:drawableLeft="@drawable/ic_auto"
+        android:drawableLeft="@drawable/ic_baseline_directions_car_24"
         android:paddingStart="23dp"
         />
 

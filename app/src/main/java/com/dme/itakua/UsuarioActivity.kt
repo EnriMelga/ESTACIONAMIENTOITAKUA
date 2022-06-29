@@ -14,12 +14,16 @@ class UsuarioActivity : AppCompatActivity() {
     private lateinit var binding:UsuariosRegistradosBinding
     override fun onCreate(savedInstanceState: Bundle?) {
 
-        val BASE_URL = Constants.SERVER_HOST+"/estacionamiento-ita-kua/view/cliente/mostrarClientes.php"
+        val BASE_URL = Constants.SERVER_HOST+"/estacionamiento-ita-kua/view/usuario/mostrarUsuarios.php"
         super.onCreate(savedInstanceState)
         binding = UsuariosRegistradosBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.BackBTN.setOnClickListener {
+            finish()
+        }
         binding.BtnRegistrarUsuario.setOnClickListener {
-        startActivity(Intent(this,CrearUsuario::class.java))
+            startActivity(Intent(this,CrearUsuario::class.java))
         }
 
         binding.webListarClientes.webChromeClient = object : WebChromeClient(){

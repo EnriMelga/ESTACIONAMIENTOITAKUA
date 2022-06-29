@@ -1,5 +1,6 @@
 package com.dme.itakua
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.dme.itakua.databinding.ActivityCrearUsuarioBinding
@@ -11,5 +12,8 @@ class EstacTiempoReActivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         binding = ActivityEstacionamientoTiempoRealBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        binding.BackBTN.setOnClickListener {
+            finish()
+        }
     }
 }

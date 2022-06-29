@@ -20,7 +20,8 @@
     </style>
     <style name="MenuA" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:textSize">20dp</item>
-<item name="android:drawablePadding">20dp</item>
+        <item name="android:drawablePadding">20dp</item>
+        <item name="colorPrimary">@color/black</item>
     </style>
 
     <style name="Theme.EstacionamientoItaKua.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />

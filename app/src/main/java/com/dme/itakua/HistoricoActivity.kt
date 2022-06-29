@@ -1,5 +1,6 @@
 package com.dme.itakua
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.dme.itakua.databinding.ActivityHistoricoBinding
@@ -11,6 +12,8 @@ class HistoricoActivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         binding = ActivityHistoricoBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        binding.BackBTN.setOnClickListener {
+            finish()
+        }
     }
 }

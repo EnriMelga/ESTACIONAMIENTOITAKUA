@@ -49,11 +49,12 @@
         android:layout_below="@id/Password"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="65dp"
-        android:background="@drawable/boton_redondo"
+        android:background="@drawable/boton_redondo_sin_color"
+        android:backgroundTint="#FFFFFF"
+        android:textColorHint="#BF000000"
         android:hint="Continuar"
-        android:textColor="@color/black"
         android:textSize="18dp"
-        android:textStyle="bold" />
+         />
 
     <EditText
         android:id="@+id/Password"
