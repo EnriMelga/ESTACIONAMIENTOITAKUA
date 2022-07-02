@@ -14,7 +14,7 @@ class UsuarioActivity : AppCompatActivity() {
     private lateinit var binding:UsuariosRegistradosBinding
     override fun onCreate(savedInstanceState: Bundle?) {
 
-        val BASE_URL = Constants.SERVER_HOST+"/estacionamiento-ita-kua/view/usuario/mostrarUsuarios.php"
+        val BASE_URL = Constants.SERVER_HOST+"estacionamiento-ita-kua/index.php?user="+Constants.currentUser.idusuario+"&v=usuarios"
         super.onCreate(savedInstanceState)
         binding = UsuariosRegistradosBinding.inflate(layoutInflater)
         setContentView(binding.root)

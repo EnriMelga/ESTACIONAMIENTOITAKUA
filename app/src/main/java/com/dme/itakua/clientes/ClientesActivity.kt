@@ -11,7 +11,7 @@ import com.dme.itakua.databinding.ActivityClientesBinding
 class ClientesActivity : AppCompatActivity() {
     private lateinit var binding: ActivityClientesBinding
     override fun onCreate(savedInstanceState: Bundle?) {
-        val BASE_URL = Constants.SERVER_HOST+"/estacionamiento-ita-kua/index.php?user="+Constants.currentUser.idusuario+"&v=mostrarclientes"
+        val BASE_URL = Constants.SERVER_HOST+"estacionamiento-ita-kua/index.php?user="+Constants.currentUser.idusuario+"&v=clientes"
         super.onCreate(savedInstanceState)
         binding = ActivityClientesBinding.inflate(layoutInflater)
         setContentView(binding.root)

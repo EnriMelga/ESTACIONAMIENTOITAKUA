@@ -73,6 +73,7 @@ class HomeFragment: Fragment() {
             }
         }
         return root
+        //Comentando para que aparezca algo
     }
     //Funcion encargado de cambiar color de la moto al pulsar
     fun pulsaBtnMoto(){

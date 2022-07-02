@@ -33,13 +33,11 @@ class ConfiguracionFragment : Fragment() {
         val root: View = binding.root
 
         //OCULTAR BOTONES
-        if(Constants.currentUser.idtipousuario == 2){
-
-            //desactivando y ocultando btn Monto Tarifa y Usuarios
+        if(Constants.currentUser.idtipousuario == 2){// 2 es funcionario
+            //Desactivando y ocultando btn Monto Tarifa y Usuarios
             binding.BtnModificarMontoTarifa.isVisible = false
             binding.BtnUsuarios.isVisible = false
         }
-
 
         binding.BtnUsuarios.setOnClickListener {
             startActivity(Intent(activity, UsuarioActivity::class.java))
