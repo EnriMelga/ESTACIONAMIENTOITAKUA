@@ -33,52 +33,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/BuscarText"
-        android:layout_width="70dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="136dp"
-        android:gravity="center"
-        android:text="Buscar:"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/toolbarPruba" />
-
-    <EditText
-        android:id="@+id/BuscadorEditText"
-        android:layout_width="220dp"
-        android:layout_height="40dp"
-        android:background="@drawable/lineadobarra"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.68"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/BuscarText" />
-
-    <Spinner
-        android:layout_width="150dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="80dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/toolbarPruba" />
-
-    <LinearLayout
-        android:layout_width="350dp"
-        android:layout_height="400dp"
-        android:background="@drawable/boton_redondo_sin_color"
-        android:backgroundTint="@color/personalizado"
-        android:orientation="vertical"
+    <WebView
+        android:id="@+id/Web_Historico"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.77">
-
-    </LinearLayout>
+        app:layout_constraintVertical_bias="0.633" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

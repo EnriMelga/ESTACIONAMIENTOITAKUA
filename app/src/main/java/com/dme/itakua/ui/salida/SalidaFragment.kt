@@ -8,8 +8,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.webkit.WebChromeClient
+import android.webkit.WebViewClient
 import android.widget.TimePicker
 import androidx.lifecycle.ViewModelProvider
+import com.dme.itakua.core.Constants
 import com.dme.itakua.databinding.FragmentHomeBinding
 import com.dme.itakua.databinding.FragmentSalidaBinding
 import com.dme.itakua.ui.home.HomeViewModel
@@ -30,20 +33,21 @@ class SalidaFragment : Fragment() {
         _binding = FragmentSalidaBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        binding.idModoManual.setOnClickListener {
-            //Logica para lanzar Menu de Hora Manual
-            val cal = Calendar.getInstance()
-            val timeSetListener = TimePickerDialog.OnTimeSetListener { timePicker: TimePicker, hour:Int, minute:Int ->
-                cal.set(Calendar.HOUR_OF_DAY, hour)
-                cal.set(Calendar.MINUTE, minute)
-                binding.HoraModificable.text = SimpleDateFormat("HH:mm").format(cal.time)//Formate de hora
-            }
-            TimePickerDialog(activity,timeSetListener,cal.get(Calendar.HOUR_OF_DAY),cal.get(Calendar.MINUTE),true).show()
-        }
+        val BASE_URL = Constants.SERVER_HOST+"estacionamiento-ita-kua/index.php?user="+ Constants.currentUser.idusuario+"&v=salida"
+        super.onCreate(savedInstanceState)
 
-        binding.ImprimirRegistro.setOnClickListener {
-            binding.HoraModificable.text=SimpleDateFormat("HH:mm").format(Calendar.getInstance().getTime())
+
+
+        binding.WebSalida.webChromeClient = object : WebChromeClient(){
+
         }
+        binding.WebSalida.webViewClient = object : WebViewClient(){
+
+        }
+        val settings = binding.WebSalida.settings
+        settings.javaScriptEnabled = true
+
+        binding.WebSalida.loadUrl(BASE_URL)
 
         return root
     }

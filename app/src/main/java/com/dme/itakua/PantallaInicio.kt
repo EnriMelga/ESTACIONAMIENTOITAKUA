@@ -23,6 +23,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.dme.itakua.core.Constants
 import com.dme.itakua.databinding.ActivityPantallaInicioBinding
+import com.dme.itakua.model.data.Userdata
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import java.sql.Time
@@ -82,6 +83,7 @@ class PantallaInicio : AppCompatActivity() {
                 .setMessage("¿Cerrar Sesion?")
                 .setCancelable(false)
                 .setPositiveButton("Si") { dialog, whichButton ->
+
                     //Vuelve a pantalla de Iniciar Sesion
                     startActivity(Intent(this,IniciarSesion::class.java))
                     finish()

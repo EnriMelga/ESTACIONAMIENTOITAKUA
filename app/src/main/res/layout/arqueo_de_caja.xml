@@ -33,114 +33,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/SaldoText"
-        android:layout_width="150dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="100dp"
-        android:text="Saldo Inicial:"
-        android:textColor="@color/black"
-        android:textSize="25dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/toolbarPruba" />
-
-    <TextView
-        android:id="@+id/Monto_de_Saldo"
-        android:layout_width="170dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="208dp"
-        android:layout_marginTop="100dp"
-        android:background="@drawable/boton_impresora"
-        android:backgroundTint="@color/personalizado"
-        android:gravity="right"
-        android:inputType="number"
-        android:paddingEnd="15dp"
-        android:text="0"
-        android:textColor="@color/black"
-        android:textSize="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:layout_width="50dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="76dp"
-        android:text="Hora"
-        android:textColor="@color/black"
-        android:textSize="22dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.211"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/SaldoText" />
-
-    <TextView
-        android:layout_width="65dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="76dp"
-        android:layout_marginEnd="92dp"
-        android:text="Monto"
-        android:textColor="@color/black"
-        android:textSize="22dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/Monto_de_Saldo" />
-
-    <RelativeLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="350dp"
-        android:layout_height="340dp"
-        android:background="@drawable/boton_redondo_sin_color"
-        android:backgroundTint="@color/personalizado"
-        android:orientation="vertical"
+    <WebView
+        android:id="@+id/Web_Arqueo_de_caja"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.578">
-
-        <TextView
-            android:layout_width="70dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="90dp"
-            android:layout_marginTop="300dp"
-            android:layout_marginEnd="50dp"
-            android:layout_marginBottom="50dp"
-            android:text="TOTAL:"
-            android:textColor="@color/black"
-            android:textSize="20dp" />
-
-        <TextView
-            android:layout_width="170dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="170dp"
-            android:layout_marginTop="295dp"
-            android:layout_marginEnd="50dp"
-            android:layout_marginBottom="50dp"
-            android:background="@drawable/boton_redondo_sin_color"
-            android:backgroundTint="@color/white"
-            android:gravity="right"
-            android:inputType="number"
-            android:paddingTop="7dp"
-            android:paddingEnd="15dp"
-            android:text="0"
-            android:textColor="@color/black"
-            android:textSize="22dp" />
-
-    </RelativeLayout>
-
-    <Button
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="396dp"
-        android:background="@drawable/boton_redondo_sin_color"
-        android:backgroundTint="@color/personalizado"
-        android:text="Retirar de Caja"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.817"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout" />
+        app:layout_constraintVertical_bias="0.633" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
