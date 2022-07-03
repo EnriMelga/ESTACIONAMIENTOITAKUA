@@ -27,6 +27,9 @@ class EstacTiempoReActivity : AppCompatActivity(){
         val settings = binding.WebTiempoReal.settings
         settings.javaScriptEnabled = true
 
+        binding.WebTiempoReal.loadUrl(BASE_URL)
+
+
         binding.BackBTN.setOnClickListener {
             finish()
         }

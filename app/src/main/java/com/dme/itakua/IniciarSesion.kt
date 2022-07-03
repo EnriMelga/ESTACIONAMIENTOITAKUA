@@ -49,12 +49,16 @@ class IniciarSesion : AppCompatActivity() {
             if(obj.getString("error").equals("false")){ //Inicio de Sesion validado
                 startActivity(Intent(this,PantallaInicio::class.java))
                 finish()
+                //vaciar la variable
+                Constants.currentUser = Userdata()
                 obj.get("userdata")
                 val builder = GsonBuilder()
                 val tempObj = builder.create().fromJson(obj.getString("userdata"), Userdata::class.java)
                 Constants.currentUser = tempObj
-                showToast(Constants.currentUser.tipousuario)
+//                showToast(Constants.currentUser.tipousuario)
                 println("USERDATA TIPOUS: " + Constants.currentUser.tipousuario)
+                println("USERDATA nombre Us: " + Constants.currentUser.nombreCompleto)
+
 //                val topic = gson.fromJson(json, Topic::class.java)
             }else{
                 startActivity(Intent(this,IniciarSesion::class.java))

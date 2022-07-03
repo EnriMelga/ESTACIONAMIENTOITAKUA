@@ -43,7 +43,11 @@ class PantallaInicio : AppCompatActivity() {
         setSupportActionBar(binding.appBarPantallaInicio.toolbar)
 
         //Invoca a la funcion que muestra el nombre del Usuario
-        loadData()
+//        loadData()
+//        val vistaHeader :View = binding.navView.getHeaderView(0)
+//        val tvNombreNavBar :TextView = vistaHeader.findViewById(R.id.Nombre_Usuario)
+//        tvNombreNavBar.text = Constants.currentUser.nombreCompleto
+//
 
         //Renombre de ID
         val drawerLayout: DrawerLayout = binding.drawerLayout
@@ -67,12 +71,15 @@ class PantallaInicio : AppCompatActivity() {
         return true
     }
 
+
+
     //Funcion que encargado de cargar el Nombre del Usuario en el drawer
-    fun loadData(){
-        val vistaHeader :View = binding.navView.getHeaderView(0)
-        val tvNombreNavBar :TextView = vistaHeader.findViewById(R.id.Nombre_Usuario)
-        tvNombreNavBar.setText(Constants.currentUser.nombreCompleto)
-    }
+//    fun loadData(){
+//        val vistaHeader :View = binding.navView.getHeaderView(0)
+//        val tvNombreNavBar :TextView = vistaHeader.findViewById(R.id.Nombre_Usuario)
+//        tvNombreNavBar.text = Constants.currentUser.nombreCompleto
+////        tvNombreNavBar.setText(Constants.currentUser.nombreCompleto)
+//    }
 
     //Logica al pulsar menu superior derecho
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -85,6 +92,9 @@ class PantallaInicio : AppCompatActivity() {
                 .setPositiveButton("Si") { dialog, whichButton ->
 
                     //Vuelve a pantalla de Iniciar Sesion
+
+                    //
+                    Constants.currentUser = Userdata()
                     startActivity(Intent(this,IniciarSesion::class.java))
                     finish()
                 }
